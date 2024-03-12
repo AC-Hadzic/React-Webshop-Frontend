@@ -1,7 +1,12 @@
+import { Outlet } from "react-router-dom";
+
 function MainComponent()
 {
     return (
-        <div>Main Component</div>
+        <div className={"main"}>
+            Main Component
+            <Outlet />
+        </div>
     )
 }
 
