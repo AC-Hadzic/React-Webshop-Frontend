@@ -1,7 +1,18 @@
+import { Banner } from "./Banner";
+import { HeaderMain } from "./HeaderMain";
+import "./header.css"
+
 function HeaderComponent()
 {
     return (
-        <div>Header Component</div>
+        <body>
+            <object>
+                <div class="background_header">
+                    <Banner />
+                    <HeaderMain />
+                </div>
+            </object>
+        </body>
     )
 }
 

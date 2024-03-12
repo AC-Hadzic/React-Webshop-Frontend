@@ -1,13 +1,13 @@
 import { HeaderComponent } from "../Header/HeaderComponent";
-import { MainComponent } from "../Main/MainComponent";
 import { FooterComponent } from "../Footer/FooterComponent";
+import { Outlet } from "react-router-dom";
 
 function AppWrapperComponent()
 {
     return (
         <>
             <HeaderComponent />
-            <MainComponent />
+            <Outlet />
             <FooterComponent />
         </>
     )
