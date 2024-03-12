@@ -18,7 +18,7 @@ function App() {
             <Route path='/product' element={<Product />}>
               <Route path='/product/:id' element={<SingleProduct />} />
             </Route>
-          </Route>        
+          </Route>         
         </Routes>
       </BrowserRouter>
     </>
