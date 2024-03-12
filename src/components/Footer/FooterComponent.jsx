@@ -1,7 +1,7 @@
 function FooterComponent()
 {
     return (
-        <div>Footer</div>
+        <div>Footer Component</div>
     )
 }
 

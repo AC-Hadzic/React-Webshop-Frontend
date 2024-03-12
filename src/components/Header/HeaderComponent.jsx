@@ -1,7 +1,7 @@
 function HeaderComponent()
 {
     return (
-        <div>Header</div>
+        <div>Header Component</div>
     )
 }
 
