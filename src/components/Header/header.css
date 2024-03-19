@@ -1,9 +1,9 @@
 @font-face {
     font-family: Header_Font;
-    src: url(../fonts/Audiowide-Regular.ttf);
+    src: url(../Fonts/Audiowide-Regular.ttf);
 }
 
-body {
+.BodyHeader {
     margin: 0;
     padding: 0;
     font-size: larger;
@@ -30,7 +30,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    background-image: url(../images/background_header.gif);
+    background-image: url(../../assets/layoutImages/background_header.gif);
     background-position: center;
     background-size: cover;
     border-radius: 50px;
@@ -44,7 +44,7 @@ body {
     text-align: center;
 }
 
-span {
+.colorup {
     font-size: 50px;
 }
 
@@ -228,7 +228,7 @@ a, img, button, .banner_text, span:hover {
 }
 
 @media screen and (max-width: 1080px) {
-    body {
+    .BodyHeader {
         font-size: small;
     }
 
@@ -262,7 +262,7 @@ a, img, button, .banner_text, span:hover {
 }
 
 @media screen and (max-width: 850px) {
-    body {
+    .BodyHeader {
         font-size: small;
     }
 
@@ -283,7 +283,6 @@ a, img, button, .banner_text, span:hover {
         font-size: large;
     }
     
-
     .banner_text:hover {
         font-size: large;
     }
@@ -328,7 +327,6 @@ a, img, button, .banner_text, span:hover {
     .prvi_red :is(.email, .tel, .social_media), .drugi_red .faq {
         display: none;
     }
-
 
     .prvi_red > div {
         padding: 0px;

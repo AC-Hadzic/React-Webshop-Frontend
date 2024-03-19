@@ -1,0 +1,71 @@
+.light_mode 
+{
+    .background_header, main, object > .main 
+    {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 5%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.7) 95%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    a, p, h1, h2, h3, h4, span, label, .blinger, .bling, .naslovi, .podaci, .info_cijena, .team, .text_below_img {
+        color: black;
+    }
+
+    .banner_text :is(p, span) {
+        color: white;
+    }
+
+    .banner {
+        box-shadow: inset 0px 0px 20px 10px rgb(185, 185, 185);
+    }
+
+    .icon, .basket, .login, .naslov > img, form img, h2 > img {
+        filter: none;
+    }
+
+    .drugi_red {
+        border-top: black solid 1px;
+    }
+
+    main > .main {
+        border-top: 2px solid black;
+    }
+
+    .popularne_kategorije, .popularni_proizvodi, .blog, main > .main {
+        border-bottom: 2px solid black;
+    }
+
+    .main > .login {
+        border-right: 2px solid black;
+    }
+
+    hr {
+        border: 1px solid black;
+    }
+
+    th:not(:first-of-type), .vert_line {
+        border-left: 2px solid black;
+    }
+
+    .logo img {
+        filter: none;
+    }
+
+    .logo img:hover {
+        filter: invert(8%) sepia(97%) saturate(5633%) hue-rotate(360deg) brightness(83%) contrast(109%);
+    }
+    
+    .logo img:active {
+        filter: invert(47%) sepia(99%) saturate(1067%) hue-rotate(10deg) brightness(90%) contrast(101%);
+    }
+
+    @media screen and (max-width: 850px)
+    {
+        .main > .login {
+            border-right: none;
+        }
+
+        main > .main {
+            border-top: none;
+        }
+    
+    }
+}
