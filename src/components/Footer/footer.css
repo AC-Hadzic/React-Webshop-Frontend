@@ -5,7 +5,7 @@
 
 .BodyFooter {
     margin: 0;
-    font-size: larger;
+    font-size: large;
     color: white;
     font-family: Header_Font;
 }
@@ -14,7 +14,7 @@ hr {
     display: none;
 }
 
-.main {
+.MainFooter {
     height: 600px;
     width: 90vw;
     margin: 0 auto;
@@ -148,7 +148,7 @@ hr {
     }
 
 @media screen and (min-width: 1081px) and (max-width: 1650px) {
-    .main {
+    .MainFooter {
         height: 950px;
     }
 
@@ -168,7 +168,7 @@ hr {
         font-size: medium;
     }
 
-    .main {
+    .MainFooter {
         flex-wrap: wrap;
         height: 680px;
     }
@@ -233,7 +233,7 @@ hr {
         font-size: smaller;
     }
 
-    .main {
+    .MainFooter {
         height: 480px;
         width: 95vw;
     }

@@ -59,7 +59,7 @@
     color: lightsalmon;
 }
 
-.main {
+.MainBody {
     display: flex;
     height: 165px;
     width: 100%;
@@ -307,7 +307,7 @@ a, img, button, .banner_text, span:hover {
         margin-left: 10px;
     }
 
-    .main {
+    .MainBody {
         height: 70px;
     }
 

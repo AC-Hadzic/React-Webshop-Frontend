@@ -6,7 +6,7 @@ function FooterComponent()
     return (
         <div className="BodyFooter">
             <div>
-                <div className="main">
+                <div className="MainFooter">
                     <div className="prvi_dio">
                         <div className="links">
                             <span><strong>Sadržaj</strong></span>

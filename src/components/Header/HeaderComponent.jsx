@@ -20,7 +20,7 @@ function HeaderComponent()
                         </div>
                     </div>
 
-                    <div className="main">
+                    <div className="MainBody">
                         <div className="logo">
                             <div>
                                 <a href="../index.html" target="_parent"><img src={iconPack.logo} alt="Logo TeleProdaje" /></a>
