@@ -15,7 +15,7 @@ function HeaderComponent()
                                 <p className="remove_mq">
                                     EKSPLOZIVNI POPUSTI DO ČAK 2%!!!
                                 </p>
-                                <span className="colorup">~TELEPRODAJA~</span>
+                                <span className="colorup">~TELEPRODAJA dgfhdf~</span>
                             </div>
                         </div>
                     </div>
