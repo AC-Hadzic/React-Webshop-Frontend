@@ -6,7 +6,10 @@ import whatsapp_icon from "./whatsapp.svg";
 import twitter_icon from "./twitter.svg";
 import cart_icon from "./cart.svg";
 import login_icon from "./login.svg";
-import logo from "./logo.png"
+import logo from "./logo.png";
+import history_icon from "./history.svg";
+import team_icon from "./team.svg";
+import graph_icon from "./graph.svg";
 
 const iconPack =
 {
@@ -18,7 +21,10 @@ const iconPack =
     twitter: twitter_icon,
     basket: cart_icon,
     login: login_icon,
-    logo: logo
+    logo: logo,
+    history: history_icon,
+    graph: graph_icon,
+    team: team_icon
 }
 
 export {iconPack};

@@ -15,7 +15,7 @@ function Home()
     return (
         <div className="home">
             <div className="sidebar">
-                <ul>
+                <ul style={{margin: 0}}>
                     <li>Item 1</li>
                     <li>Item 2</li>
                     <li>Item 3</li>

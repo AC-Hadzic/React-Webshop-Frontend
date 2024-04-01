@@ -6,21 +6,27 @@ import { SingleProduct } from './components/Products/SingleProduct'
 import { Home } from './components/Home/Home'
 import { ProductList } from './components/Products/ProductList'
 import { Outlet } from 'react-router-dom'
+import { AboutUs } from './components/Page/About_Us'
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+
           <Route path='/' element={<AppWrapperComponent />}>
             <Route index element={<Home />} />
-            <Route path='/contact' element={<Page title={"Contact"} description={"Some Contact Description"}/>}/>
-            <Route path='/about' element={<Page title={"About us"} description={"Some About Description"}/>}/>
+            <Route path='/contact' element={<Page title={"Contact"} description={"Contact Descrip"}/>}/>
+            <Route path='/about' element={<Page title={"About us"} description={"About Descrip"}/>}/>
+            
+            <Route path='/about_us' element={<AboutUs />} />
+
             <Route path='/product' element={<Outlet />}>
               <Route index element={<ProductList title={"Default"} />} />
               <Route path='/product/:id' element={<SingleProduct />} />
             </Route>
-          </Route>         
+          </Route> 
+                  
         </Routes>
       </BrowserRouter>
     </>

@@ -5,7 +5,6 @@
 
 .BodyFooter {
     margin: 0;
-    font-size: large;
     color: white;
     font-family: Header_Font;
 }
@@ -57,7 +56,7 @@ hr {
         border-radius: 30px;
         height: 60px;
         width: 180px;
-        font-size: large;
+        font-size: 1rem;
         margin-top: 25px;
     }
 
@@ -98,7 +97,6 @@ hr {
 
     .prvi_dio a:hover
     {
-        font-size: larger;
         color: darkred;
         text-align: center;
     }
@@ -164,10 +162,6 @@ hr {
 
 @media screen and (max-width: 1080px) {
 
-    .BodyFooter {
-        font-size: medium;
-    }
-
     .MainFooter {
         flex-wrap: wrap;
         height: 680px;
@@ -206,7 +200,6 @@ hr {
     button {
         height: 40px;
         width: 120px;
-        font-size: medium;
         margin-top: 15px;
     }
 
@@ -223,15 +216,10 @@ hr {
     .iframe_map {
         height: 300px;
         width: 80%;
-
     } 
 }
 
 @media screen and (max-width: 850px) {
-
-    .BodyFooter {
-        font-size: smaller;
-    }
 
     .MainFooter {
         height: 480px;
@@ -271,14 +259,12 @@ hr {
     .contact {
         width: 60%;
     }
+
     .rights {
         margin-top: 0;
-        font-size: x-small;
+        font-size: 0.7rem;
     }
 
-    .copyright {
-        font-size: xx-small;
-    }
     
     .map, .vert_line.two {
         display: none;
@@ -291,7 +277,7 @@ hr {
     button {
         height: 30px;
         width: 100px;
-        font-size: small;
+        font-size: 0.9rem;
         margin-top: 10px;
     }
 }

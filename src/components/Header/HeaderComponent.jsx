@@ -1,6 +1,7 @@
 import "./header.css";
 import "../Specific-Css/theme.css"
 import { iconPack } from "../../assets/Icons/Icons";
+import { Link } from "react-router-dom";
 
 function HeaderComponent()
 {
@@ -15,7 +16,7 @@ function HeaderComponent()
                                 <p className="remove_mq">
                                     EKSPLOZIVNI POPUSTI DO ČAK 2%!!!
                                 </p>
-                                <span className="colorup">~TELEPRODAJA dgfhdf~</span>
+                                <span className="colorup">~TELEPRODAJA~</span>
                             </div>
                         </div>
                     </div>
@@ -23,7 +24,7 @@ function HeaderComponent()
                     <div className="MainBody">
                         <div className="logo">
                             <div>
-                                <a href="../index.html" target="_parent"><img src={iconPack.logo} alt="Logo TeleProdaje" /></a>
+                                <Link to={"/"}><img src={iconPack.logo} alt="Logo TeleProdaje" /></Link>
                             </div>
                         </div>
 
@@ -40,7 +41,6 @@ function HeaderComponent()
                                 </div>
 
                                 <div className="social_media">
-                                    
                                     <div>
                                         <a id="fb" href="https://www.facebook.com/TeleRecenzija/" target="_blank"><img className="icon" src={iconPack.facebook} alt="Link to Facebook" /></a>
                                     </div>
@@ -63,11 +63,13 @@ function HeaderComponent()
                                 </div>
 
                                 <div className="basket">
-                                    <a href="../cart.html" target="_parent"><img className="icon" src={iconPack.basket}alt="Basket icon" /></a>
+                                    <a href="../cart.html" target="_parent"><img className="icon" src={iconPack.basket}alt="Basket icon" />
+                                    </a>
                                 </div>
 
                                 <div className="login">
-                                    <a href="../login.html" target="_parent"><img className="icon" src={iconPack.login} alt="Login icon" /></a>
+                                    <a href="../login.html" target="_parent"><img className="icon" src={iconPack.login} alt="Login icon" />
+                                    </a>
                                 </div>
                             </div>
 
@@ -77,7 +79,7 @@ function HeaderComponent()
                                 </div>
 
                                 <div className="about">
-                                    <a href="../about.html" target="_parent"> O nama </a>
+                                    <Link to={"/about_us"}> O nama </Link>
                                 </div>
 
                                 <div className="contact">

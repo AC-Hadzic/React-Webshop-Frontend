@@ -1,3 +1,7 @@
+html {
+    font-size: 20px;
+}
+
 #loader_inner {
     width: 100vw;
     height: 100vh;
@@ -98,14 +102,9 @@
     src: url(../Fonts/Tektur-VariableFont.ttf);
 }
 
-.Header {
-    margin-bottom: -6px;
-}
-
 .Body {
     font-family: Main_Font;
     margin: 0px;
-    font-size: larger;
     background-image: url(../../assets/layoutImages/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -154,8 +153,19 @@ button:active {
     background-color: orange;
 }
 
+@media screen and (max-width: 1080px)
+{
+    html {
+        font-size: 16px;
+    }  
+}
+
 @media screen and (max-width: 850px)
 {
+    html {
+        font-size: 14px;
+    }
+
     .Main {
         width: 95vw;
     }
@@ -198,7 +208,6 @@ button:active {
         height: 32px;
     }
 
-    
     #loader_icon img {
         width: auto;
         height: 75px;

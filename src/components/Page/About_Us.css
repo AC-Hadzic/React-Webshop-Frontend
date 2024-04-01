@@ -1,0 +1,131 @@
+.fit, p {
+    margin-inline: 50px;
+}
+
+h2 {
+    margin: 0;
+    padding: 50px;
+}
+
+section {
+    text-align: justify;
+    line-height: 30px;
+}
+
+.icon {
+    filter: invert(98%) sepia(100%) saturate(0%) hue-rotate(325deg) brightness(101%) contrast(105%);
+
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+:is(.history, .mission) > img {
+    width: 600px;
+    height: 400px;
+    margin-inline: 50px;
+    float: left;
+    border-radius: 25px;
+}
+
+.mission > img {
+    float: right;
+}
+
+.team  {
+    min-height: 550px;
+}
+
+.team div {
+    margin-left: 50px;
+}
+
+.team > img {
+    width: 600px;
+    height: 400px; 
+    float: right;  
+    margin-inline: 50px;
+    border-radius: 25px;
+}
+
+.team p {
+    margin-top: 50px;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
+:is(.history, .mission, .team) > img:hover {
+    transition: 0.1s linear all;
+    filter: brightness(115%);
+}
+
+:is(.history, .mission, .team) > img:not(:hover) {
+    transition: 0.1s linear all;
+
+}
+
+.clear {
+    display: none;
+}
+
+@media screen and (max-width: 1080px)
+{
+    :is(.history, .mission, .team) > img {
+        width: 500px;
+        height: 333px;
+        float: none;
+        margin: 20px auto;
+        display: block;
+    }
+
+    h2 {
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 850px)
+{
+    .clear {
+        display: block;
+    }
+
+    .fit {
+        margin-inline: 0;
+    }
+
+    section {
+        line-height: 25px;
+    }
+
+    p {
+        margin-inline: 30px;
+    }
+
+    .icon {
+        height: 20px;
+        width: 20px;
+        margin-right: 5px;
+    }
+
+    :is(.history, .mission, .team) > img {
+        width: 275px;
+        height: 190px;
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        padding: 0px;
+        margin-inline: 0px;
+        text-align: center;
+    }
+
+    hr {
+        width: 90% !important;
+    }
+
+    .team div {
+        margin: 0;
+        margin-inline: 20px;
+    }
+}

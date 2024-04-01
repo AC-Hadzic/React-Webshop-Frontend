@@ -6,7 +6,6 @@
 .BodyHeader {
     margin: 0;
     padding: 0;
-    font-size: larger;
     font-family: Header_Font;
     color: white;
 }
@@ -40,22 +39,22 @@
 }
 
 .banner_text {
-    font-size: xx-large;
+    font-size: 1.5rem;
     text-align: center;
 }
 
 .colorup {
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 .banner_text:hover .colorup {
-    font-size: 80px;
+    font-size: 4rem;
     color: yellow;
 }
 
 .banner_text:hover {
     text-shadow: 5px 5px 0px black;
-    font-size: 40px;
+    font-size: 2rem;
     color: lightsalmon;
 }
 
@@ -166,7 +165,7 @@
 
     #search_bar {
         border: 1px solid black;
-        font-size: large;
+        font-size: 1rem;
         height: 40px;
         width: 150px;
         border-radius: 25px;
@@ -210,7 +209,7 @@ a {
 
 :is(.prvi_red, .drugi_red) a:hover
 {
-    font-size: larger;
+    font-size: 1.1rem;
     color: darkred;
 }
 
@@ -228,10 +227,6 @@ a, img, button, .banner_text, span:hover {
 }
 
 @media screen and (max-width: 1080px) {
-    .BodyHeader {
-        font-size: small;
-    }
-
     .logo img {
         height: 120px;
         width: 120px;
@@ -255,16 +250,9 @@ a, img, button, .banner_text, span:hover {
     {
         margin-inline: 15px;
     }
-
-    .banner_text:hover span {
-        font-size: 60px;
-    }
 }
 
 @media screen and (max-width: 850px) {
-    .BodyHeader {
-        font-size: small;
-    }
 
     .background_header {
         height: 190px;
@@ -275,20 +263,12 @@ a, img, button, .banner_text, span:hover {
         height: 120px;
     }
 
-    .banner_text {
-        font-size: medium;
-    }
-
-    span {
-        font-size: large;
+    .colorup {
+        font-size: 1.8rem;
     }
     
-    .banner_text:hover {
-        font-size: large;
-    }
-
     .banner_text:hover .colorup {
-        font-size: larger;
+        font-size: 2rem;
     }
 
     .remove_mq {
