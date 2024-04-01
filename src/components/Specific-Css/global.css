@@ -130,7 +130,7 @@ a {
 
 a:hover {
     transition: 0.1s linear all;
-    font-size: larger;
+    font-size: 1.1rem;
     color: darkred;
 }
 
