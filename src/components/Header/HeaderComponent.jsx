@@ -83,7 +83,7 @@ function HeaderComponent()
                                 </div>
 
                                 <div className="contact">
-                                    <a href="../contact.html" target="_parent"> Kontakti </a>
+                                    <Link to={"/contacts"}> Kontakti </Link>
                                 </div>
 
                                 <div className="Blog">

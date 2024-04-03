@@ -10,6 +10,7 @@ import logo from "./logo.png";
 import history_icon from "./history.svg";
 import team_icon from "./team.svg";
 import graph_icon from "./graph.svg";
+import chat_icon from "./chat.svg";
 
 const iconPack =
 {
@@ -24,7 +25,8 @@ const iconPack =
     logo: logo,
     history: history_icon,
     graph: graph_icon,
-    team: team_icon
+    team: team_icon,
+    chat: chat_icon
 }
 
 export {iconPack};

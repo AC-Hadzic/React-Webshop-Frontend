@@ -123,17 +123,17 @@
     padding: 5px;
 }
 
-    .social_media {
+    .menus .social_media {
         display: flex;
         justify-content: space-around;
         width: 200px;
     }
 
-    .social_media div {
+    .menus .social_media div {
         width: 40px;
     }
 
-    :is(.social_media, .basket, .login) img:hover {
+    .BodyHeader :is(.social_media, .basket, .login) img:hover {
         height: 40px;
         width: 40px;
     }
@@ -318,7 +318,7 @@ a, img, button, .banner_text, span:hover {
         margin-inline: 0px;
     }
 
-    :is(.social_media, .basket, .login) img:hover {
+    .BodyHeader :is(.social_media, .basket, .login) img:hover {
         height: 30px;
         width: 30px;
     }

@@ -4,8 +4,8 @@ import "../Specific-Css/theme.css"
 function FooterComponent()
 {
     return (
-        <div className="BodyFooter">
-            <div>
+        <div className="footer_wrap">
+            <div className="BodyFooter">
                 <div className="MainFooter">
                     <div className="prvi_dio">
                         <div className="links">
