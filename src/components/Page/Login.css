@@ -1,0 +1,148 @@
+.login_wrap
+{
+    .icon {
+        filter: invert(98%) sepia(100%) saturate(0%) hue-rotate(325deg) brightness(101%) contrast(105%);
+    
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+    }
+    
+    .main {
+        display: flex;
+    }
+    
+    button {
+        border: 2px solid black;
+        border-radius: 25px;
+        height: 50px;
+        width: 130px; 
+        margin: 30px;
+        font-weight: bold;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    
+    .login_section {
+        border-right: 2px solid white;
+        width: 50%;
+    
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    label {
+        margin-right: 20px;
+    }
+    
+    input {
+        border: 2px solid black;
+        border-radius: 25px;
+        height: 35px;
+        width: 200px;
+        margin-top: 10px;
+    }
+    
+    .user_input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .register_recover {
+        margin-inline: 50px;
+        text-align: center;
+    }
+    
+    h2 {
+        margin: 0;
+        margin-left: 100px;
+        margin-bottom: 40px;
+        padding-top: 40px;
+    }
+    
+    span a {
+        color: orange;
+    }
+    
+    .height {
+        height: 30px;
+        text-align: center;
+    }
+    
+    @media screen and (max-width: 1080px)
+    {
+        h2 {
+            margin-inline: 20px;
+            text-align: center;
+        }
+    
+        .icon {
+            height: 20px;
+            width: 20px;
+            margin-right: 5px;
+        }
+    
+        .main {
+            font-size: medium;
+        }
+        
+        input {
+            height: 30px;
+            width: 180px;
+            margin-top: 10px;
+            margin-bottom: 20PX;
+        }
+    
+        label {
+            margin-right: 0px;
+        }
+    
+        .login_section {
+            margin-inline: 20px;
+            margin-bottom: 20px;
+        }
+    
+        .register_recover {
+            margin-left: 0;
+            margin-right: 30px;
+        }
+    
+        button {
+            height: 45px;
+            width: 120px; 
+            margin: 20px;
+        }
+    }
+    
+    @media screen and (max-width: 850px)
+    {
+        .main {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        input {
+            margin-top: 5px;
+        }
+    
+        .login_section {
+            border: none;
+        }
+    
+        .register_recover {
+            margin-inline: 20px;
+        }
+    
+        .height {
+            height: 60px;
+        }
+    }
+}

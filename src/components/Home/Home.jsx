@@ -1,9 +1,17 @@
 import "./Home.css";
 import burning from "../../assets/images/burning_apple.jpg";
-import dirty from "../../assets/images/clean_ur_junk.jpg"
+import dirty from "../../assets/images/clean_ur_junk.jpg";
+import data from "../Products/ProductData.json";
+import { Pop_Products } from "./Pop_Products";
 
 function Home()
 {
+    console.log(data)
+
+    const new_data = [data[0], data[1], data[2], data[5]];
+
+    console.log(new_data);
+
     return (
         <div className="main_wrap">
             <div className="main_content">
@@ -22,50 +30,7 @@ function Home()
 
                 <article className="popularni_proizvodi">
                     <div className="blinger"> Prodaje se ko ludo!!! </div>
-                    <a href="products/iPhone15PM.html">
-                        <section>
-                            <h3> Apple iPhone 15 <br /> Pro Max </h3>
-                            <img src="images/proizvodi/ip15pm.jpg" alt="iPhone 15 Pro Max" />
-                            <div className="intern_product">
-                                <span> 1.449,00 <br /> EUR </span>
-                                <div className="vert_line"></div>
-                                <span> Klik za <br /> kupnju! </span>
-                            </div>
-                        </section>
-                    </a>
-                    <a href="products/iPhone15P.html">
-                        <section>
-                            <h3> Apple iPhone 15 <br /> Pro </h3>
-                            <img src="images/proizvodi/ip15p.jpg" alt="iPhone 15 Pro" />
-                            <div className="intern_product">
-                                <span> 1.199,00 <br /> EUR </span>
-                                <div className="vert_line"></div>
-                                <span> Klik za <br /> kupnju! </span>
-                            </div>
-                        </section>
-                    </a>
-                    <a href="products/s24U.html">
-                        <section>
-                            <h3> Samsung Galaxy S24 <br /> Ultra</h3>
-                            <img src="images/proizvodi/s24u.jpg" alt="Galaxy S24 Ultra" />
-                            <div className="intern_product">
-                                <span> 1.499,00 <br /> EUR </span>
-                                <div className="vert_line"></div>
-                                <span> Klik za <br /> kupnju! </span>
-                            </div>
-                        </section>
-                    </a>
-                    <a href="products/cloth.html">
-                        <section>
-                            <h3> Apple Cloth </h3>
-                            <img src="images/proizvodi/cloth.jpg" alt="Apple Cloth" />
-                            <div className="intern_product">
-                                <span> 29,00 <br /> EUR </span>
-                                <div className="vert_line"></div>
-                                <span> Klik za <br /> kupnju! </span>
-                            </div>
-                        </section>
-                    </a>
+                    <Pop_Products />
                 </article>
 
                 <article className="blog">

@@ -1,5 +1,6 @@
 import "./footer.css";
 import "../Specific-Css/theme.css"
+import { Link } from "react-router-dom";
 
 function FooterComponent()
 {
@@ -11,19 +12,19 @@ function FooterComponent()
                         <div className="links">
                             <span><strong>Sadržaj</strong></span>
                             <div className="home">
-                                <a href="../index.html" target="_parent"> Naslovnica </a>
+                                <Link to={"/"} onClick={() => {window.scrollTo(0, 0)}}> Naslovnica</Link>
                             </div>
 
                             <div className="products">
-                                <a href="../products.html" target="_parent"> Proizvodi </a>
+                                <Link to={"/product"} onClick={() => {window.scrollTo(0, 0)}}> Proizvodi </Link>
                             </div>
 
                             <div className="about">
-                                <a href="../about.html" target="_parent"> O nama </a>
+                            <Link to={"/about_us"} onClick={() => {window.scrollTo(0, 0)}}> O nama </Link>
                             </div>
 
                             <div className="contacts">
-                                <a href="../contact.html" target="_parent"> Kontakti </a>
+                            <Link to={"/contacts"} onClick={() => {window.scrollTo(0, 0)}}> Kontakti </Link>
                             </div>     
                         </div>
 
@@ -40,7 +41,9 @@ function FooterComponent()
                                 <br />
                             <span><strong>Adresa:</strong> ul. Brokulice Hrabroga 2, Šibenik </span>
                                 <br />
-                            <a href="/contact.html" target="_parent"><button> Kontakt forma</button></a>
+                            <Link to={"/contacts"} onClick={() => {window.scrollTo(0, 0)}}>
+                                <button> Kontakt forma</button>
+                            </Link>
                         </div>
 
                         <div className="vert_line two"></div>

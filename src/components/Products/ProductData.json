@@ -1,0 +1,250 @@
+[
+    {
+        "id": 0,
+        "name": "iPhone 15 Pro Max",
+        "brand": "Apple",
+        "price": 1449,
+        "description": "Najnoviji i najjači iPhone ikad. Sa najboljom kamerom i procesorom ikad. Sa najboljim titanijum okvirom i Pro staklom ikad. Također i sa najvišom cijenom; ikad. Smartphone prikladan za sve power usere!",
+        "code": "d1.51.810.91.",
+        "specifications": 
+        {
+            "display": "6,7in LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits",
+            "chip": "Apple A17 Pro (3 nm)",
+            "cameras": "Apple Pro grade camera: 48MP wide + 12MP (0.6x) ultrawide + 12MP (5x) telephoto",
+            "battery": "Li-Ion 4441 mAh Pro baterija"
+        },
+        "images":
+        [
+            {"src": "/src/assets/productImages/iPhone_15/ip15pm.jpg"},
+            {"src": "/src/assets/productImages/iPhone_15/ip15p_1.jpg"},
+            {"src": "/src/assets/productImages/iPhone_15/ip15p_2.jpg"},
+            {"src": "/src/assets/productImages/iPhone_15/ip15p_3.jpg"}
+        ],
+        "ratings":
+        [
+            {
+                "user": "Jusuf_Aga",
+                "text": "Kupio bi ga ja i dvaput al treba mi za karte, stoga ipak dosta jedan."
+            },
+
+            {
+                "user": "Prco_45",
+                "text": "Malo pre velik i tezak al ajde, ipak je ajfon to."
+            },
+
+            {
+                "user": "Lejla",
+                "text": "E to je telefon, ne šteka ka onaj moj android od 150 evra. Samo APPLE!1!!"
+            },
+
+            {
+                "user": "Awwwa_48156",
+                "text": "Best buy."
+            }
+        ]
+    },
+
+    {
+        "id": 1,
+        "name": "iPhone 15 Pro",
+        "brand": "Apple",
+        "price": 1199,
+        "description": "Najnoviji i najjači iPhone ikad. Sa najboljom kamerom i procesorom ikad. Sa najboljim titanijum okvirom i Pro staklom ikad. Također i sa najvišom cijenom; ikad. Smartphone prikladan za sve power usere!",
+        "code": "d1.51.810.91.",
+        "specifications":     
+        {
+            "display": "6,1in LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits",
+            "chip": "Apple A17 Pro (3 nm)",
+            "cameras": "Apple Pro grade camera: 48MP wide + 12MP (0.6x) ultrawide + 12MP (3x) telephoto",
+            "battery": "Li-Ion 3274 mAh Pro baterija"
+        },
+        "images":
+        [
+            {"src": "/src/assets/productImages/iPhone_15/ip15p.jpg"},
+            {"src": "/src/assets/productImages/iPhone_15/ip15p_1.jpg"},
+            {"src": "/src/assets/productImages/iPhone_15/ip15p_2.jpg"},
+            {"src": "/src/assets/productImages/iPhone_15/ip15p_3.jpg"}
+        ],
+        "ratings":
+        [
+            {
+                "user": "Duško_1998",
+                "text": "Nema šta, ovoe top radi super. Kupio bi opet 5/5."
+            },
+
+            {
+                "user": "Zoran_Mamlaz97",
+                "text": "Skup je brate al vridi para. Dobia san i krpu za brisat u preorderu."
+            },
+
+            {
+                "user": "Jasmina_D",
+                "text": "Ok"
+            }
+        ]        
+    },
+
+    {
+        "id": 2,
+        "name": "Galaxy S24 Ultra",
+        "brand": "Samsung",
+        "price": 1499,
+        "description": "Najbolji android uređaj što novci mogu kupiti. Super zrnati zaslon bez boja, fantastični S Pen za doodlanje. Zoom kamere kakve se mogu samo zamislit! Pravi telefon za prave powerusere!",
+        "code": "d1.51.810.91.",
+        "specifications":     
+        {
+            "display": "6,8in Dynamic LTPO AMOLED 2X, 120Hz, HDR10+, 2600 nits",
+            "chip": "Qualcomm Snapdragon 8 Gen 3 (4 nm)",
+            "cameras": "Ultra AI camera: 200MP wide + 12MP (0.6x) ultrawide + 12MP (3x) telephoto + 50MP (x5) periscope",
+            "battery": "Li-Ion 5000 mAh Ultra baterija"
+        },
+        "images":
+        [
+            {"src": "/src/assets/productImages/s24U/s24u.jpg"},
+            {"src": "/src/assets/productImages/s24U/s24u_1.jpg"},
+            {"src": "/src/assets/productImages/s24U/s24u_2.jpg"},
+            {"src": "/src/assets/productImages/s24U/s24u_3.jpg"}
+        ],
+        "ratings":
+        [
+            {
+                "user": "Pseto_1",
+                "text": "Malo mi zrnat zaslon na niskoj svjetlini, al osim toga mobitel je raketa."
+            },
+
+            {
+                "user": "Minkica",
+                "text": "Vrh! Jako brz i baterija traje vjecno. Kamera može zoomirat drugima u nos dlake brojati. PRe dobro!"
+            }
+        ]        
+    },
+
+    {
+        "id": 3,
+        "name": "Galaxy S24",
+        "brand": "Samsung",
+        "price": 999,
+        "description": "Skoro pa najbolji android uređaj što novci mogu kupiti. Super prosječni zaslon bez boja, sa prosječnim kamerama. Pravi telefon za korisinike što ne žele potrošiti previše novaca!",
+        "code": "d1.51.810.91.",
+        "specifications":     
+        {
+            "display": "6,2in Dynamic LTPO AMOLED 2X, 120Hz, HDR10+, 2600 nits",
+            "chip": "Qualcomm Snapdragon 8 Gen 3 (4 nm)",
+            "cameras": "AI camera: 50MP wide + 12MP (0.6x) ultrawide + 10MP (3x) telephoto",
+            "battery": "Li-Ion 4000 mAh Ultra baterija"
+        },
+        "images":
+        [
+            {"src": "/src/assets/productImages/s24/s24.jpg"},
+            {"src": "/src/assets/productImages/s24/s24_1.jpg"},
+            {"src": "/src/assets/productImages/s24/s24_2.jpg"},
+            {"src": "/src/assets/productImages/s24/s24_3.jpg"}
+        ],
+        "ratings":
+        [
+            {
+                "user": "Aldin",
+                "text": "Nije loše al uzmite ultru toe bome mašina, ovo ne toliko."
+            },
+
+            {
+                "user": "Minkica_447",
+                "text": "Super!"
+            }
+        ]        
+    },
+
+    {
+        "id": 4,
+        "name": "13 Ultra",
+        "brand": "Xiaomi",
+        "price": 1349,
+        "description": "Utjelovljenje najboljeg što Kina može ponuditi. Ultra zaslon, ultra kamere, ultra baterija, ultra dizajn, ultra reklame, ultra cijena, ma SVE Ultra.",
+        "code": "d1.51.810.91.",
+        "specifications":     
+        {
+            "display": "6,73in LTPO AMOLED, 1B colors, 120Hz, Dolby Vision, HDR10+, 1300 nits",
+            "chip": "Qualcomm Snapdragon 8 Gen 2 (4 nm)",
+            "cameras": "Ultra camera: 50MP wide + 50MP (0.6x) ultrawide + 50MP (3.2x) telephoto + 50MP (5x) periscope",
+            "battery": "Li-Ion 5000 mAh Ultra baterija"
+        },
+        "images":
+        [
+            {"src": "/src/assets/productImages/13u/13ultra.jpg"},
+            {"src": "/src/assets/productImages/13u/13u_1.jpg"},
+            {"src": "/src/assets/productImages/13u/13u_2.jpg"},
+            {"src": "/src/assets/productImages/13u/13u_3.jpg"}
+        ],
+        "ratings":
+        [
+            {
+                "user": "John_4",
+                "text": "Amazing device, very cheap and very good. Reccommended!"
+            },
+
+            {
+                "user": "__A_Mike",
+                "text": "請購買此設備，它非常好!"
+            },
+
+            {
+                "user": "管理系統",
+                "text": "CCP看著你, 小心資本家!"
+            }
+        ]        
+    },
+
+    {
+        "id": 5,
+        "name": "Polishing Cloth",
+        "brand": "Apple",
+        "price": 29,
+        "description": "Službena Apple krpica za brisanje zaslona i preostalih staklenih površina vaših Apple uređaja. Fini materijal, lako perivo, ne ostavlja tragove ni ogrebotine. Pažljivo proučiti Compactibility List da utvrdite je li vaš uređaj podržan.",
+        "code": "d1.51.810.91.",
+        "specifications":     
+        {
+            "build": "Fini ne-abrazivni materijal",
+            "dimensions": "16cm x 16cm",
+            "usage": "Čišćenje mobilnih zaslona te zaslona laptopa, monitora, tableta i slično"
+        },
+        "images":
+        [
+            {"src": "/src/assets/productImages/cloth/cloth.jpg"},
+            {"src": "/src/assets/productImages/cloth/cloth_1.jpg"}
+        ],
+        "ratings":
+        [
+            {
+                "user": "Ankica",
+                "text": "Kako bi ja čistila fleke sa svog MacBooka da mi nije Apple krpcie. Briše sve al ipak bi voljela da je ono bilo uključeno u cijenu. 29 eura za krpu je malo previše."
+            }
+        ]        
+    },
+
+    {
+        "id": 6,
+        "name": "Pro Stand",
+        "brand": "Apple",
+        "price": 999,
+        "description": "Za Appleov monitor treba vam i - Appleov nosač za monitor. Kvalitetna premium aluminijska izgrada ostavit će vas bez daha. Multifunkcionalnost ovog nosača će vas impresionirati - drži monitor. Cijena zanemariva za prave Appleove korisnike!",
+        "code": "d1.51.810.91.",
+        "specifications":     
+        {
+            "build": "Aluminij i malo gume/kablova",
+            "dimensions": "18cm x 44cm x 24cm",
+            "usage": "Kao nosač za Apple Pro Display XDR"
+        },
+        "images":
+        [
+            {"src": "/src/assets/productImages/stand/stand.jpg"},
+            {"src": "/src/assets/productImages/stand/stand_1.jpg"}
+        ],
+        "ratings":
+        [
+            {
+                "user": "Alfred87",
+                "text": "Dobarrr 5/5"
+            }
+        ]        
+    }
+]

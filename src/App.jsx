@@ -8,6 +8,8 @@ import { ProductList } from './components/Products/ProductList'
 import { Outlet } from 'react-router-dom'
 import { AboutUs } from './components/Page/About_Us'
 import { Contact } from './components/Page/Contact'
+import { Blog } from './components/Page/Blog'
+import { Login } from './components/Page/Login'
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             
             <Route path='/about_us' element={<AboutUs />} />
             <Route path='/contacts' element={<Contact />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/login' element={<Login />} />
 
             <Route path='/product' element={<Outlet />}>
               <Route index element={<ProductList title={"Default"} />} />

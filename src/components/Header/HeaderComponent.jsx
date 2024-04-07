@@ -68,8 +68,9 @@ function HeaderComponent()
                                 </div>
 
                                 <div className="login">
-                                    <a href="../login.html" target="_parent"><img className="icon" src={iconPack.login} alt="Login icon" />
-                                    </a>
+                                    <Link to={"/login"}>
+                                        <img className="icon" src={iconPack.login} alt="Login icon" />
+                                    </Link>
                                 </div>
                             </div>
 
@@ -87,7 +88,7 @@ function HeaderComponent()
                                 </div>
 
                                 <div className="Blog">
-                                    <a href="../blog.html" target="_parent"> Blog </a>
+                                    <Link to={"/blog"}> Blog </Link>
                                 </div>
                             </div>     
                         </div>
