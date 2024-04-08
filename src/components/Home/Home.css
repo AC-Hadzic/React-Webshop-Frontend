@@ -254,9 +254,14 @@
         .popularni_proizvodi img {
             height: 150px;
             width: 150px;
+            margin-bottom: 0px;
+        }
+
+        h3  {
+            margin-bottom: 0px;
         }
     
-        section {
+        .popularni_proizvodi section, section {
             width: 200px;
         }
     

@@ -1,0 +1,222 @@
+.product_wrap
+{
+    .icon {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+        margin-bottom: -7px;
+        filter: none
+    }
+    
+    .icon.user {
+        filter: invert(98%) sepia(100%) saturate(0%) hue-rotate(325deg) brightness(101%) contrast(105%);
+    }
+    
+    .proizvod_opis {
+        display: flex;
+        margin-inline: 50px;
+    }
+    
+    h1, h2 {
+        width: 100%;
+        margin: 0;
+        padding-top: 50px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .proizvod_slika img {
+        height: 400px;
+        width: 400px;
+        border-radius: 50px;
+        margin: 50px;
+    }
+    
+    div > img:hover {
+        box-shadow: 0px 0px 25px 5px darkred;
+        transition: 0.1s linear all;
+        filter: brightness(90%);
+    }
+    
+    img:not(:hover) {
+        transition: 0.1s linear all;
+    }
+    
+    span {
+        font-weight: bold;
+    }
+    
+    p {
+        line-height: 30px;
+        margin-inline: 50px;
+        text-align: justify;
+    }
+    
+    .buy {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .buy p  {
+        text-align: left;
+    }
+    
+    button {
+        width: 220px;
+        height: 60px;
+        font-weight: bold;
+        font-size: 0.8rem;
+        border-radius: 50px;
+        margin-right: 20px;
+    }
+    
+    .prijava {
+        width: 120px;
+        height: 40px;
+        font-size: 0.7rem;
+        margin-left: 20px;
+    }
+    
+    .proizvod_galerija {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .proizvod_galerija img {
+        height: auto;
+        max-width: 100%;
+        border-radius: 50px;
+        margin: 10px;
+    }
+    
+    hr {
+        width: 78vw !important;
+    }
+    
+    .rating {
+        margin-left: 100px;
+    }
+    
+    .rating .checked {
+        color: orange;
+        font-size: 2rem;
+    }
+
+    .rating .not_checked {
+        font-size: 2rem;
+    }
+    
+    .rating span {
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+    
+    .user_ratings {
+        width: 40vw;
+        margin-left: 100px;
+    }
+    
+    .komentar:not(:last-of-type) {
+        border-bottom: 2px solid white;
+        padding-bottom: 10px;
+    }
+    
+    .komentar:last-of-type {
+        padding-bottom: 50px;
+    }
+    
+    @media screen and (max-width: 1080px)
+    
+    {
+        .prijava {
+            font-size: 0.8rem;
+        }
+
+        p {
+            margin-inline: 25px;
+        }
+    
+        .proizvod_slika img {
+            height: 200px;
+            width: 200px;
+            margin: 25px;
+        }
+    
+        .proizvod_slika {
+            text-align: center;
+        }
+    
+        .proizvod_galerija > div {
+            text-align: center;
+        }
+    
+        .proizvod_galerija img {
+            max-width: 80%;
+            max-height: 50%;
+        }
+    
+        .rating span {
+            margin: 5px;
+        }
+    
+        button {
+            width: 180px;
+            height: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 50px;
+            margin-right: 20px;
+        }
+    
+        .icon {
+            height: 20px;
+            width: 20px;
+            margin-right: 5px;
+            margin-bottom: -4px;
+        }
+    }
+    
+    @media screen and (max-width: 850px)
+    {
+        .proizvod_opis {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        h1, h2, h3 {
+            text-align: center;
+            margin-inline: 0;
+        }
+    
+        h2 {
+            margin-bottom: 10px;
+        }
+    
+        .rating {
+            margin: 0;
+            text-align: center;
+        }
+    
+        .user_ratings {
+            width: auto;
+            margin-inline: 40px;
+            text-align: justify;
+        }
+    
+        .buy {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .buy p {
+            text-align: center;
+        }
+    
+        button {
+            margin: 0;
+    
+        }
+    }
+}

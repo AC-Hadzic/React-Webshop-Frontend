@@ -12,6 +12,8 @@ import team_icon from "./team.svg";
 import graph_icon from "./graph.svg";
 import chat_icon from "./chat.svg";
 import blog_icon from "./blog.svg";
+import user_icon from "./user.svg";
+import star_solid from "./star-solid.svg";
 
 const iconPack =
 {
@@ -28,7 +30,9 @@ const iconPack =
     graph: graph_icon,
     team: team_icon,
     chat: chat_icon,
-    blog: blog_icon
+    blog: blog_icon,
+    user: user_icon,
+    star_solid: star_solid
 }
 
 export {iconPack};
