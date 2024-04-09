@@ -62,10 +62,10 @@
         },
         "images":
         [
-            {"src": "/src/assets/productImages/iPhone_15/ip15p.jpg"},
-            {"src": "/src/assets/productImages/iPhone_15/ip15p_1.jpg"},
-            {"src": "/src/assets/productImages/iPhone_15/ip15p_2.jpg"},
-            {"src": "/src/assets/productImages/iPhone_15/ip15p_3.jpg"}
+            {"src": "/assets/productImages/iPhone_15/ip15p.jpg"},
+            {"src": "/assets/productImages/iPhone_15/ip15p_1.jpg"},
+            {"src": "/assets/productImages/iPhone_15/ip15p_2.jpg"},
+            {"src": "/assets/productImages/iPhone_15/ip15p_3.jpg"}
         ],
         "ratings":
         [
@@ -103,10 +103,10 @@
         },
         "images":
         [
-            {"src": "/src/assets/productImages/s24U/s24u.jpg"},
-            {"src": "/src/assets/productImages/s24U/s24u_1.jpg"},
-            {"src": "/src/assets/productImages/s24U/s24u_2.jpg"},
-            {"src": "/src/assets/productImages/s24U/s24u_3.jpg"}
+            {"src": "/assets/productImages/s24U/s24u.jpg"},
+            {"src": "/assets/productImages/s24U/s24u_1.jpg"},
+            {"src": "/assets/productImages/s24U/s24u_2.jpg"},
+            {"src": "/assets/productImages/s24U/s24u_3.jpg"}
         ],
         "ratings":
         [
@@ -139,10 +139,10 @@
         },
         "images":
         [
-            {"src": "/src/assets/productImages/s24/s24.jpg"},
-            {"src": "/src/assets/productImages/s24/s24_1.jpg"},
-            {"src": "/src/assets/productImages/s24/s24_2.jpg"},
-            {"src": "/src/assets/productImages/s24/s24_3.jpg"}
+            {"src": "/assets/productImages/s24/s24.jpg"},
+            {"src": "/assets/productImages/s24/s24_1.jpg"},
+            {"src": "/assets/productImages/s24/s24_2.jpg"},
+            {"src": "/assets/productImages/s24/s24_3.jpg"}
         ],
         "ratings":
         [
@@ -175,10 +175,10 @@
         },
         "images":
         [
-            {"src": "/src/assets/productImages/13u/13ultra.jpg"},
-            {"src": "/src/assets/productImages/13u/13u_1.jpg"},
-            {"src": "/src/assets/productImages/13u/13u_2.jpg"},
-            {"src": "/src/assets/productImages/13u/13u_3.jpg"}
+            {"src": "/assets/productImages/13u/13ultra.jpg"},
+            {"src": "/assets/productImages/13u/13u_1.jpg"},
+            {"src": "/assets/productImages/13u/13u_2.jpg"},
+            {"src": "/assets/productImages/13u/13u_3.jpg"}
         ],
         "ratings":
         [
@@ -215,8 +215,8 @@
         },
         "images":
         [
-            {"src": "/src/assets/productImages/cloth/cloth.jpg"},
-            {"src": "/src/assets/productImages/cloth/cloth_1.jpg"}
+            {"src": "/assets/productImages/cloth/cloth.jpg"},
+            {"src": "/assets/productImages/cloth/cloth_1.jpg"}
         ],
         "ratings":
         [
@@ -243,8 +243,8 @@
         },
         "images":
         [
-            {"src": "/src/assets/productImages/stand/stand.jpg"},
-            {"src": "/src/assets/productImages/stand/stand_1.jpg"}
+            {"src": "/assets/productImages/stand/stand.jpg"},
+            {"src": "/assets/productImages/stand/stand_1.jpg"}
         ],
         "ratings":
         [
