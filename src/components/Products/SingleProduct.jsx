@@ -73,10 +73,26 @@ function SingleProduct()
                         <h3> Šifra proizvoda: <span> {data[id].code} </span></h3>
 
                         <h3>Specifikacije:</h3>
-                        <p><span>Zaslon:</span> {data[id].specifications.display} </p>
+
+                        {data[id].specifications ? (
+                            <div>
+                                <p><span>Zaslon:</span> {data[id].specifications.display} </p>
+                                <p><span>Čip:</span> {data[id].specifications.chip} </p>
+                                <p><span>Kamere:</span> {data[id].specifications.cameras} </p>
+                                <p><span>Baterija:</span> {data[id].specifications.battery} </p>
+                            </div>
+                        ) : (
+                            <div>
+                                <p><span>Materijal:</span> {data[id].specs.build} </p>
+                                <p><span>Dimenzije:</span> {data[id].specs.dimensions} </p>
+                                <p><span>Upotreba:</span> {data[id].specs.usage} </p>
+                            </div>
+                        )}
+
+                        {/* <p><span>Zaslon:</span> {data[id].specifications.display} </p>
                         <p><span>Čip:</span> {data[id].specifications.chip} </p>
                         <p><span>Kamere:</span> {data[id].specifications.cameras} </p>
-                        <p><span>Baterija:</span> {data[id].specifications.battery} </p>
+                        <p><span>Baterija:</span> {data[id].specifications.battery} </p> */}
                             <br /><br />
                         <div className="buy">
                             <div>
