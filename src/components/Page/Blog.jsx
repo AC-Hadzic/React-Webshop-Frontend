@@ -1,6 +1,6 @@
 import "./Blog.scss";
-import burning from "../../assets/images/burning_apple.jpg";
-import dirty from "../../assets/images/clean_ur_junk.jpg";
+import burning from "/assets/images/burning_apple.jpg";
+import dirty from "/assets/images/clean_ur_junk.jpg";
 
 function Blog()
 {

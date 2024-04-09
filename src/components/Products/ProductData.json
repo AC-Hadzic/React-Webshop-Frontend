@@ -16,10 +16,10 @@
         },
         "images":
         [
-            {"src": "/src/assets/productImages/iPhone_15/ip15pm.jpg"},
-            {"src": "/src/assets/productImages/iPhone_15/ip15p_1.jpg"},
-            {"src": "/src/assets/productImages/iPhone_15/ip15p_2.jpg"},
-            {"src": "/src/assets/productImages/iPhone_15/ip15p_3.jpg"}
+            {"src": "/assets/productImages/iPhone_15/ip15pm.jpg"},
+            {"src": "/assets/productImages/iPhone_15/ip15p_1.jpg"},
+            {"src": "/assets/productImages/iPhone_15/ip15p_2.jpg"},
+            {"src": "/assets/productImages/iPhone_15/ip15p_3.jpg"}
         ],
         "ratings":
         [

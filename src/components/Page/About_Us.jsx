@@ -1,7 +1,7 @@
 import "./About_Us.scss";
-import history from "../../assets/images/history.jpg";
-import broccoli from "../../assets/images/broccoli_office.jpg";
-import mission from "../../assets/images/mission.jpg";
+import history from "/assets/images/history.jpg";
+import broccoli from "/assets/images/broccoli_office.jpg";
+import mission from "/assets/images/mission.jpg";
 
 function AboutUs()
 {

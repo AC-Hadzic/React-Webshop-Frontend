@@ -1,5 +1,5 @@
 import "./Contact.scss";
-import broccoli from "../../assets/images/broccoli_office.jpg";
+import broccoli from "/assets/images/broccoli_office.jpg";
 
 function Contact()
 {

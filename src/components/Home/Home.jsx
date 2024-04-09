@@ -1,6 +1,6 @@
 import "./Home.scss";
-import burning from "../../assets/images/burning_apple.jpg";
-import dirty from "../../assets/images/clean_ur_junk.jpg";
+import burning from "/assets/images/burning_apple.jpg";
+import dirty from "/assets/images/clean_ur_junk.jpg";
 import data from "../Products/ProductData.json";
 import { Pop_Products } from "./Pop_Products";
 

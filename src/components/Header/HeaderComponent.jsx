@@ -1,7 +1,7 @@
 import "./header.scss";
 import "../Specific-Css/theme.scss"
 import { Link } from "react-router-dom";
-import logo from "../../assets/others/logo.png";
+import logo from "/assets/others/logo.png";
 
 function HeaderComponent()
 {
