@@ -1,29 +1,25 @@
-import "./Contact.css";
+import "./Contact.scss";
 import broccoli from "../../assets/images/broccoli_office.jpg";
-import { iconPack } from "../../assets/Icons/Icons";
 
 function Contact()
 {
     return (
         <div className="contacts_wrap">
-            <h2><img src={iconPack.chat} alt="Chat icon" /> Kontaktiraj TeleProdaju </h2>
+            <h2><i className="bi bi-chat-quote-fill"></i> Kontaktiraj TeleProdaju </h2>
 
             <article className="contacts">
                 <section className="contact_form">
                     <form action="hvala-vam.html" target="_parent" method="get">
                     <label for="name_surname"> Ime i prezime: </label><br />
                     <input type="text" name="name_surname" id="name_surname" placeholder="  Gavrilo Paperclip" required />
-
                         <br /><br />
 
                     <label for="email"> Email: </label><br />
                     <input type="email" name="email" id="email" placeholder="  gav.paperclip@gmail.com" size="30" required />
-
                         <br /><br />
 
                     <label for="poruka"> Poruka: </label><br />
                     <textarea name="poruka" id="poruka" cols="32" rows="10" placeholder="  Vaša poruka ovdje." required></textarea>
-
                         <br /><br />
 
                         <article className="newsletter">
@@ -35,17 +31,14 @@ function Contact()
                                 <label for="check_newsletter">Prijavi me na newsletter</label>    
                             </div>
                         </article>
+                            <br /> 
 
-                        <br /> 
+                        <div className="form_controls">
+                            <button type="submit"> Pošalji poruku </button>
+                                <br /><br />
 
-                    <div className="form_controls">
-                        <button type="submit"> Pošalji poruku </button>
-
-                            <br /><br />
-
-                        <button type="reset"> Izbriši podatke</button>
-                    </div>
-                        
+                            <button type="reset"> Izbriši podatke</button>
+                        </div>
                     </form>
                 </section>
 
@@ -79,13 +72,11 @@ function Contact()
                                     <td>Oliver Golubović</td>
                                 </tr>                                
                             </tbody>
-
                         </table> 
                     </div>
-                    <br />
+                        <br />
 
                     <div className="social_media">
-
                         <hr />
 
                         <p>
@@ -94,17 +85,17 @@ function Contact()
                         
                         <div className="media_links">
                             <div>
-                                <a id="fb" href="https://www.facebook.com/TeleRecenzija/" target="_blank"><img className="icon" src={iconPack.facebook} alt="Link to Facebook" /> TeleRecenzije </a>
+                                <a id="fb" href="https://www.facebook.com/TeleRecenzija/" target="_blank"><i className="bi bi-facebook"></i> TeleRecenzije </a>
                             </div>
                             <div>
-                                <a id="in" href="https://www.instagram.com/telerecenzija/" target="_blank"><img className="icon" src={iconPack.instagram} alt="Link to Instagram" /> TeleRecenzije </a>
+                                <a id="in" href="https://www.instagram.com/telerecenzija/" target="_blank"><i className="bi bi-instagram"></i> TeleRecenzije </a>
                             </div>
                             <div>
-                                <a id="wp" href="https://www.whatsapp.com/telerecenzija/" target="_blank"><img className="icon" src={iconPack.whatsapp} alt="Link to Whatsapp" /> TeleRecenzije</a>
+                                <a id="wp" href="https://www.whatsapp.com/telerecenzija/" target="_blank"><i className="bi bi-whatsapp"></i> TeleRecenzije</a>
                             </div>
                         
                             <div>
-                                <a id="tw" href="https://www.twitter.com/telerecenzija/" target="_blank"><img className="icon" src={iconPack.twitter} alt="Link to Twitter" /> TeleRecenzije </a>
+                                <a id="tw" href="https://www.twitter.com/telerecenzija/" target="_blank"><i className="bi bi-twitter"></i> TeleRecenzije </a>
                             </div>
                         </div>
 

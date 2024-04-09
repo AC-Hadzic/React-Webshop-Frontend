@@ -1,17 +1,5 @@
 .product_wrap
 {
-    .icon {
-        height: 30px;
-        width: 30px;
-        margin-right: 10px;
-        margin-bottom: -7px;
-        filter: none
-    }
-    
-    .icon.user {
-        filter: invert(98%) sepia(100%) saturate(0%) hue-rotate(325deg) brightness(101%) contrast(105%);
-    }
-    
     .proizvod_opis {
         display: flex;
         margin-inline: 50px;
@@ -61,6 +49,10 @@
     .buy p  {
         text-align: left;
     }
+
+    .add_to_cart i {
+        font-size: 1.3rem;
+    }
     
     button {
         width: 220px;
@@ -93,6 +85,11 @@
     
     hr {
         width: 78vw !important;
+    }
+
+    .user i {
+        font-size: 2rem;
+        margin-right: 10px;
     }
     
     .rating {
@@ -144,11 +141,7 @@
             margin: 25px;
         }
     
-        .proizvod_slika {
-            text-align: center;
-        }
-    
-        .proizvod_galerija > div {
+        .proizvod_slika, .proizvod_galerija > div {
             text-align: center;
         }
     
@@ -168,13 +161,6 @@
             font-size: 1rem;
             border-radius: 50px;
             margin-right: 20px;
-        }
-    
-        .icon {
-            height: 20px;
-            width: 20px;
-            margin-right: 5px;
-            margin-bottom: -4px;
         }
     }
     
@@ -216,7 +202,6 @@
     
         button {
             margin: 0;
-    
         }
     }
 }

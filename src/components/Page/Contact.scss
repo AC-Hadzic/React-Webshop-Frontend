@@ -1,19 +1,26 @@
 .contacts_wrap 
 {
     .media_links div:hover #fb {
-        filter: invert(35%) sepia(64%) saturate(849%) hue-rotate(187deg) brightness(90%) contrast(78%);
+        color: rgb(66, 108, 226);
     }
     
     .media_links div:hover #tw {
-        filter: invert(49%) sepia(45%) saturate(1822%) hue-rotate(176deg) brightness(97%) contrast(95%);
+        color: rgb(0, 157, 255);
     }
     
     .media_links div:hover #in {
-        filter: invert(31%) sepia(33%) saturate(2440%) hue-rotate(289deg) brightness(96%) contrast(97%);
+        color: rgb(212, 107, 125);
     }
     
     .media_links div:hover #wp {    
-        filter: invert(63%) sepia(94%) saturate(412%) hue-rotate(86deg) brightness(92%) contrast(87%);
+        color: rgb(38, 122, 5);
+    }
+
+    #fb, #tw, #in, #wp {
+        font-size: 1.2rem;
+    }
+    :is(#fb, #tw, #in, #wp):hover {
+        font-size: 1.4rem;
     }
     
     h2 {
@@ -53,13 +60,6 @@
         font-style: italic;
         margin-top: -40px;
         margin-left: 15px;
-    }
-    
-    .icon, h2 > img {
-        filter: invert(98%) sepia(100%) saturate(0%) hue-rotate(325deg) brightness(101%) contrast(105%);
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
     }
     
     tr td:first-of-type {
@@ -166,12 +166,6 @@
             width: 60%;
             margin-left: 40px;
         }
-    
-        .icon {
-            margin-right: 10px;
-            width: 20px;
-            height: 20px;
-        }
     }
     
     @media screen and (max-width: 850px)
@@ -185,11 +179,6 @@
             margin-bottom: 30px;
         }
     
-        h2 img {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-        }
         .contacts  {
             flex-direction: column-reverse;
             justify-content: center;

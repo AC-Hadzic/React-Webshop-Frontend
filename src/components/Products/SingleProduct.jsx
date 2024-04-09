@@ -1,7 +1,6 @@
 import { Link, Outlet, useParams } from "react-router-dom";
 import data from "./ProductData.json";
-import "./SingleProduct.css";
-import { iconPack } from "../../assets/Icons/Icons";
+import "./SingleProduct.scss";
 
 function SingleProduct()
 {
@@ -26,7 +25,7 @@ function SingleProduct()
             ratings.map((data, id) => (
                 <div key={id}>
                     <div className="user">
-                        <h4><img className="icon user" src={iconPack.user} alt="User Icon" /> {data.user}</h4>
+                        <h4><i class="bi bi-person-fill"></i>{data.user}</h4>
                     </div>
 
                     <div className="komentar">
@@ -84,20 +83,18 @@ function SingleProduct()
                                 <p>Cijena uređaja: <span>{data[id].price},00 EUR</span></p>
                             </div>
                             <div className="add_to_cart">
-                                <button><img className="icon" src={iconPack.basket} alt="Basket icon" /> Dodaj u košaricu</button>
+                                <button><i className="bi bi-cart-fill"></i> Dodaj u košaricu</button>
                             </div>
                         </div>
                     </div>
                 </section>
-
                     <hr />
 
                 <h2>Galerija:</h2>
                 <section className="proizvod_galerija">
                         {gallery()}
                 </section>
-
-                <hr />
+                    <hr />
 
                 <h2>Recenzije:</h2>
                 <section className="proizvod_recenzije">

@@ -1,13 +1,5 @@
 .blog_wrap
 {
-    .icon {
-        filter: invert(98%) sepia(100%) saturate(0%) hue-rotate(325deg) brightness(101%) contrast(105%);
-    
-        height: 30px;
-        width: 30px;
-        margin-right: 10px;
-    }
-    
     .blog {
         margin-inline: 100px;
     }
@@ -78,12 +70,6 @@
         div {
             flex-wrap: wrap;
             justify-content: center;
-        }
-    
-        .icon {
-            height: 20px;
-            width: 20px;
-            margin-right: 5px;
         }
     }
     

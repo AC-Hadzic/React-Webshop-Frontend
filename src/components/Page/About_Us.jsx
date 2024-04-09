@@ -1,5 +1,4 @@
-import { iconPack } from "../../assets/Icons/Icons";
-import "./About_Us.css";
+import "./About_Us.scss";
 import history from "../../assets/images/history.jpg";
 import broccoli from "../../assets/images/broccoli_office.jpg";
 import mission from "../../assets/images/mission.jpg";
@@ -10,7 +9,7 @@ function AboutUs()
         <div className="about_wrap">
             <article className="fit">
                 <section className="history">
-                    <h2><img className="icon" src={iconPack.history} alt="History Icon" />Povijest TeleRecenzije <br className="clear"/> i TeleProdaje</h2>
+                    <h2><i className="bi bi-hourglass-top"></i> Povijest TeleRecenzije <br className="clear"/> i TeleProdaje</h2>
         
                     <img src={history} alt="Generic history image" title="AI generated image" />
 
@@ -34,7 +33,7 @@ function AboutUs()
                 <hr/>  
 
                 <section className="mission">
-                    <h2><img className="icon" src={iconPack.graph} alt="Graph Icon" /> Misija TeleRecenzije <br className="clear"/> i TeleProdaje </h2>
+                    <h2><i className="bi bi-graph-up-arrow"></i> Misija TeleRecenzije <br className="clear"/> i TeleProdaje </h2>
         
                     <img src={mission} alt="Generic image used for mission section" title="AI generated image" />
         
@@ -54,8 +53,7 @@ function AboutUs()
                 <hr/>
 
                 <section className="team">
-                    <h2><img className="icon" src={iconPack.team} alt="Team Icon" /> Članovi TeleRecenzije </h2>
-
+                    <h2><i className="bi bi-people-fill"></i> Članovi TeleRecenzije </h2>
                     <img src={broccoli} alt="Uredi TeleProdaje" /> 
 
                     <div>
@@ -72,7 +70,6 @@ function AboutUs()
                 </section>
             </article>            
         </div>
-
     )
 }
 

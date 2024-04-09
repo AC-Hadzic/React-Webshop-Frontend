@@ -1,11 +1,10 @@
-import { iconPack } from "../../assets/Icons/Icons";
-import "./Login.css"
+import "./Login.scss"
 
 function Login()
 {
     return (
         <div className="login_wrap">
-            <h2><img className="icon" src={iconPack.login} alt="Login Icon" /> Prijavite se u svoj TeleProdaja korisnički račun:</h2>
+            <h2><i className="bi bi-box-arrow-in-right"></i> Prijavite se u svoj TeleProdaja korisnički račun:</h2>
 
             <div className="main">
                 <div className="login_section">

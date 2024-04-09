@@ -1,13 +1,5 @@
 .login_wrap
-{
-    .icon {
-        filter: invert(98%) sepia(100%) saturate(0%) hue-rotate(325deg) brightness(101%) contrast(105%);
-    
-        height: 30px;
-        width: 30px;
-        margin-right: 10px;
-    }
-    
+{  
     .main {
         display: flex;
     }
@@ -82,12 +74,6 @@
         h2 {
             margin-inline: 20px;
             text-align: center;
-        }
-    
-        .icon {
-            height: 20px;
-            width: 20px;
-            margin-right: 5px;
         }
     
         .main {

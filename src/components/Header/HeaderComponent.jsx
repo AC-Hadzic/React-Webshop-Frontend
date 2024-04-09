@@ -1,7 +1,7 @@
-import "./header.css";
-import "../Specific-Css/theme.css"
-import { iconPack } from "../../assets/Icons/Icons";
+import "./header.scss";
+import "../Specific-Css/theme.scss"
 import { Link } from "react-router-dom";
+import logo from "../../assets/Icons/logo.png";
 
 function HeaderComponent()
 {
@@ -24,37 +24,37 @@ function HeaderComponent()
                     <div className="MainBody">
                         <div className="logo">
                             <div>
-                                <Link to={"/"}><img src={iconPack.logo} alt="Logo TeleProdaje" /></Link>
+                                <Link to={"/"}><img src={logo} alt="Logo TeleProdaje" /></Link>
                             </div>
                         </div>
 
                         <div className="menus">
                             <div className="prvi_red">
                                 <div className="email">
-                                    <a href="mailto: telesales@gmail.com"><img className="icon" src={iconPack.email} alt="Email icon" /></a>
+                                    <a href="mailto: telesales@gmail.com"><i className="bi bi-envelope-fill"></i></a>
                                     <a href="mailto: teleprodaja@gmail.com"> telesales@gmail.com</a>
                                 </div>
 
                                 <div className="tel">
-                                    <a href="tel:022 123 321"><img className="icon" src={iconPack.telephone} alt="Phone icon" /></a>
+                                    <a href="tel:022 123 321"><i className="bi bi-telephone-fill"></i></a>
                                     <a href="tel:+385022123321">+385 022 123 321</a>
                                 </div>
 
                                 <div className="social_media">
                                     <div>
-                                        <a id="fb" href="https://www.facebook.com/TeleRecenzija/" target="_blank"><img className="icon" src={iconPack.facebook} alt="Link to Facebook" /></a>
+                                        <a id="fb" href="https://www.facebook.com/TeleRecenzija/" target="_blank"><i className="bi bi-facebook"></i></a>
                                     </div>
 
                                     <div>
-                                        <a id="in" href="https://www.instagram.com/telerecenzija/" target="_blank"><img className="icon" src={iconPack.instagram} alt="Link to Instagram" /></a>
+                                        <a id="in" href="https://www.instagram.com/telerecenzija/" target="_blank"><i className="bi bi-instagram"></i></a>
                                     </div>
 
                                     <div>
-                                        <a id="wp" href="https://www.whatsapp.com/telerecenzija/" target="_blank"><img className="icon" src={iconPack.whatsapp} alt="Link to Whatsapp" /></a>
+                                        <a id="wp" href="https://www.whatsapp.com/telerecenzija/" target="_blank"><i className="bi bi-whatsapp"></i></a>
                                     </div>
 
                                     <div>
-                                        <a id="tw" href="https://www.twitter.com/telerecenzija/" target="_blank"><img className="icon" src={iconPack.twitter} alt="Link to Twitter" /></a>
+                                        <a id="tw" href="https://www.twitter.com/telerecenzija/" target="_blank"><i className="bi bi-twitter"></i></a>
                                     </div>
                                 </div>
 
@@ -63,13 +63,13 @@ function HeaderComponent()
                                 </div>
 
                                 <div className="basket">
-                                    <a href="../cart.html" target="_parent"><img className="icon" src={iconPack.basket}alt="Basket icon" />
+                                    <a href="../cart.html" target="_parent"><i className="bi bi-cart-fill"></i>
                                     </a>
                                 </div>
 
                                 <div className="login">
                                     <Link to={"/login"}>
-                                        <img className="icon" src={iconPack.login} alt="Login icon" />
+                                    <i className="bi bi-box-arrow-in-right"></i>
                                     </Link>
                                 </div>
                             </div>
