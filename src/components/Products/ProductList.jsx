@@ -16,8 +16,6 @@ function ProductList()
                     <ProductFilter />
                 </section>
 
-
-                
                 <section className="fit_all">
                     <h2><i className="bi bi-tags-fill"></i> Svi proizvodi: </h2>
                     <div  className="options">
