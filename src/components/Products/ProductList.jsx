@@ -67,12 +67,12 @@ function ProductList() {
                             <h4>Tip proizvoda:</h4>
 
                             {/* Category filters */}
-                            {cats.map((elm, index) => (
+                            {cats.map((meow, index) => (
                             <div className="form-check ms-2" key={index}>
                                 <label className="form-check-label">
                                     <input className="form-check-input" type="checkbox" 
-                                    onChange={(e) => updateFilters(e.target.checked, elm, 'category')}/>
-                                    {elm}
+                                    onChange={(e) => updateFilters(e.target.checked, meow, 'category')}/>
+                                    {meow}
                                 </label>
                             </div>
                             ))}
