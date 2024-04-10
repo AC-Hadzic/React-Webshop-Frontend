@@ -5,6 +5,7 @@ import dirty from "/assets/images/clean_ur_junk.jpg";
 function Blog()
 {
     return (
+        // TODO: Blog from JSON
         <div className="blog_wrap">
             <article className="blog">
                 <section>
@@ -27,6 +28,7 @@ function Blog()
                     </div>
                 </section>    
                 
+                {/* TODO: Moar functional pages */}
                 <div className="pagination">
                     <a href="#">&laquo;</a>
                     <a href="#" className="active">1</a>

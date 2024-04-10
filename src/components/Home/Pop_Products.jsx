@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function Pop_Products()
 {
+    // Popular products, generating links
     const new_data = [data[0], data[1], data[2], data[5]];
 
     return (

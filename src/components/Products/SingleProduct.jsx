@@ -1,11 +1,13 @@
-import { Link, Outlet, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import data from "./ProductData.json";
 import "./SingleProduct.scss";
 
 function SingleProduct()
 {
+    // Get ID from URL
     let { id } = useParams();
 
+    // Get all the img src from array
     function gallery()
     {
         const prod_img = data[id].images;
@@ -17,6 +19,7 @@ function SingleProduct()
         )
     }
 
+    // Get all ratings from array
     function reviews()
     {
         const ratings = data[id].ratings;
@@ -37,6 +40,7 @@ function SingleProduct()
         )
     }
 
+    // Convert rating value to img stars
     function stars()
     {
         const total_rate = 5;
@@ -71,9 +75,9 @@ function SingleProduct()
                         <p> {data[id].description} </p>
 
                         <h3> Šifra proizvoda: <span> {data[id].code} </span></h3>
-
                         <h3>Specifikacije:</h3>
 
+                        {/* Different specs depending on product */}
                         {data[id].specifications ? (
                             <div>
                                 <p><span>Zaslon:</span> {data[id].specifications.display} </p>
@@ -89,10 +93,6 @@ function SingleProduct()
                             </div>
                         )}
 
-                        {/* <p><span>Zaslon:</span> {data[id].specifications.display} </p>
-                        <p><span>Čip:</span> {data[id].specifications.chip} </p>
-                        <p><span>Kamere:</span> {data[id].specifications.cameras} </p>
-                        <p><span>Baterija:</span> {data[id].specifications.battery} </p> */}
                             <br /><br />
                         <div className="buy">
                             <div>

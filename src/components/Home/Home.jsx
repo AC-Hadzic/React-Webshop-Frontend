@@ -1,17 +1,10 @@
 import "./Home.scss";
 import burning from "/assets/images/burning_apple.jpg";
 import dirty from "/assets/images/clean_ur_junk.jpg";
-import data from "../Products/ProductData.json";
 import { Pop_Products } from "./Pop_Products";
 
 function Home()
 {
-    console.log(data)
-
-    const new_data = [data[0], data[1], data[2], data[5]];
-
-    console.log(new_data);
-
     return (
         <div className="main_wrap">
             <div className="main_content">
@@ -33,6 +26,7 @@ function Home()
                     <Pop_Products />
                 </article>
 
+                {/* TODO: Blogs into JSON */}
                 <article className="blog">
                     <section>
                         <h2> Appleovo rješenje za pregrijavanje iPhonea? </h2>

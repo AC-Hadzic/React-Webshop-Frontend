@@ -7,6 +7,7 @@
         "description": "Najnoviji i najjači iPhone ikad. Sa najboljom kamerom i procesorom ikad. Sa najboljim titanijum okvirom i Pro staklom ikad. Također i sa najvišom cijenom; ikad. Smartphone prikladan za sve power usere!",
         "code": "d1.51.810.91.", 
         "rate": 5,
+        "type": "iOS Uređaj",
         "specifications": 
         {
             "display": "6,7in LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits",
@@ -53,6 +54,7 @@
         "description": "Najnoviji i najjači iPhone ikad. Sa najboljom kamerom i procesorom ikad. Sa najboljim titanijum okvirom i Pro staklom ikad. Također i sa najvišom cijenom; ikad. Smartphone prikladan za sve power usere!",
         "code": "d1.51.810.91.",
         "rate": 4,
+        "type": "iOS Uređaj",
         "specifications":     
         {
             "display": "6,1in LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits",
@@ -94,6 +96,7 @@
         "description": "Najbolji android uređaj što novci mogu kupiti. Super zrnati zaslon bez boja, fantastični S Pen za doodlanje. Zoom kamere kakve se mogu samo zamislit! Pravi telefon za prave powerusere!",
         "code": "d1.51.810.91.",
         "rate": 4,
+        "type": "Android Uređaj",
         "specifications":     
         {
             "display": "6,8in Dynamic LTPO AMOLED 2X, 120Hz, HDR10+, 2600 nits",
@@ -130,6 +133,7 @@
         "description": "Skoro pa najbolji android uređaj što novci mogu kupiti. Super prosječni zaslon bez boja, sa prosječnim kamerama. Pravi telefon za korisinike što ne žele potrošiti previše novaca!",
         "code": "d1.51.810.91.",
         "rate": 3,
+        "type": "Android Uređaj",
         "specifications":     
         {
             "display": "6,2in Dynamic LTPO AMOLED 2X, 120Hz, HDR10+, 2600 nits",
@@ -166,6 +170,7 @@
         "description": "Utjelovljenje najboljeg što Kina može ponuditi. Ultra zaslon, ultra kamere, ultra baterija, ultra dizajn, ultra reklame, ultra cijena, ma SVE Ultra.",
         "code": "d1.51.810.91.",
         "rate": 5,
+        "type": "Android Uređaj",
         "specifications":     
         {
             "display": "6,73in LTPO AMOLED, 1B colors, 120Hz, Dolby Vision, HDR10+, 1300 nits",
@@ -207,6 +212,7 @@
         "description": "Službena Apple krpica za brisanje zaslona i preostalih staklenih površina vaših Apple uređaja. Fini materijal, lako perivo, ne ostavlja tragove ni ogrebotine. Pažljivo proučiti Compactibility List da utvrdite je li vaš uređaj podržan.",
         "code": "d1.51.810.91.",
         "rate": 4,
+        "type": "Dodatna Oprema",
         "specs":     
         {
             "build": "Fini ne-abrazivni materijal",
@@ -235,6 +241,7 @@
         "description": "Za Appleov monitor treba vam i - Appleov nosač za monitor. Kvalitetna premium aluminijska izgrada ostavit će vas bez daha. Multifunkcionalnost ovog nosača će vas impresionirati - drži monitor. Cijena zanemariva za prave Appleove korisnike!",
         "code": "d1.51.810.91.",
         "rate": 3,
+        "type": "Dodatna Oprema",
         "specs":     
         {
             "build": "Aluminij i malo gume/kablova",

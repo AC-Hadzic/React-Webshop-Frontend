@@ -11,7 +11,6 @@ function HeaderComponent()
                 <div className="background_header">
                     <div className="banner">
                         <div className="banner_text">
-                            {/* this div below was <p></p> */}
                             <div> 
                                 <p className="remove_mq">
                                     EKSPLOZIVNI POPUSTI DO ČAK 2%!!!
