@@ -33,6 +33,7 @@ function ProductList() {
         }
     }
 
+    // neam pojma stae ovo
     const filteredProducts = categoryFilters.size === 0 
         ? data.filter(p => p.price <= parseInt(priceFilter) || !priceFilter)
         : data.filter(p => categoryFilters.has(p.type) && (p.price <= parseInt(priceFilter) || !priceFilter));
@@ -60,6 +61,7 @@ function ProductList() {
                     <button onClick={toggleAside}> Prikaži/Zatvori filtere </button>
                 </div>
 
+                {/* Filters */}
                 <section id="aside" style={{ display: asideVisible ? 'block' : 'none' }}>
                     <div className="prodFilter_wrap">
                         <section className="asideProd">
@@ -82,29 +84,16 @@ function ProductList() {
                             {/* Price Filters */}
                             <div className="cijena_proizvoda">
                                 <h4>Cijene proizvoda:</h4>
-                                <div className="form-check ms-2">
-                                    <label className="form-check-label">
-                                        <input className="form-check-input" type="checkbox" 
-                                        onChange={(e) => updateFilters(e.target.checked, '100', 'price')}/>
-                                        Do 100,00 EUR
-                                    </label>
-                                </div>
-
-                                <div className="form-check ms-2">
-                                    <label className="form-check-label">
-                                        <input className="form-check-input" type="checkbox" 
-                                        onChange={(e) => updateFilters(e.target.checked, '1000', 'price')}/>
-                                        Do 1000,00 EUR
-                                    </label>
-                                </div>
-
-                                <div className="form-check ms-2">
-                                    <label className="form-check-label">
-                                        <input className="form-check-input" type="checkbox"
-                                        onChange={(e) => updateFilters(e.target.checked, '2000', 'price')}/>
-                                        Do 2000,00 EUR
-                                    </label>
-                                </div>
+                                {category.price_filter.map((vau, index) => (
+                                    
+                                    <div className="form-check ms-2">
+                                        <label className="form-check-label">
+                                            <input className="form-check-input" type="radio" name="price_filter" 
+                                            onChange={(e) => updateFilters(e.target.checked, vau, 'price')}/>
+                                            Do {vau} EUR
+                                        </label>
+                                    </div>
+                                ))}
                             </div>
                         </section>
                     </div>
@@ -123,7 +112,7 @@ function ProductList() {
                             <div>
                                 <button><i className="bi bi-cart-fill"></i></button>
                                 <br />
-                                <span> {data.price},00 EUR </span>
+                                <span> {data.price.toFixed(2)} EUR </span>
                             </div>
                         </div>
                         ))}

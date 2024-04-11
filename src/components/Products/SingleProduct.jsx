@@ -14,7 +14,7 @@ function SingleProduct()
 
         return (
             prod_img.map((data, id) => (
-                    <img key={id} src={data.src} alt="" />
+                <img key={id} src={data.src} alt="" />
             ))            
         )
     }
@@ -23,12 +23,11 @@ function SingleProduct()
     function reviews()
     {
         const ratings = data[id].ratings;
-
         return (
             ratings.map((data, id) => (
                 <div key={id}>
                     <div className="user">
-                        <h4><i class="bi bi-person-fill"></i>{data.user}</h4>
+                        <h4><i className="bi bi-person-fill"></i>{data.user}</h4>
                     </div>
 
                     <div className="komentar">
@@ -43,21 +42,13 @@ function SingleProduct()
     // Convert rating value to img stars
     function stars()
     {
-        const total_rate = 5;
-        const rating = data[id].rate; 
-        let left_rate = total_rate - rating;  
-        const rating_arr = Array.from({ length: rating });
-        const rating_left_arr = Array.from({ length: left_rate });
-
+        const rating = data[id].rate;
+        const rating_arr = Array.from({ length: 5 })
         return (
             <>
-                {rating_arr.map((_, id) => (
-                    <span key={id} className="checked">★</span>  
-                ))}   
-
-                {rating_left_arr.map((_, id) => (
-                    <span key={id} className="not_checked">★</span>  
-                ))}               
+                {rating_arr.map((a, index) => 
+                    <span key={index} className = {(index < rating) ? "checked" : "not_checked"}>★</span>    
+                )}            
             </>
         )
     }
@@ -106,12 +97,14 @@ function SingleProduct()
                 </section>
                     <hr />
 
+                {/* Product image gallery */}
                 <h2>Galerija:</h2>
                 <section className="proizvod_galerija">
                         {gallery()}
                 </section>
                     <hr />
-
+                
+                {/* Reviews and score */}
                 <h2>Recenzije:</h2>
                 <section className="proizvod_recenzije">
                     <div className="rating">

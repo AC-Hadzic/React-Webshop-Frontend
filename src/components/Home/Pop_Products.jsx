@@ -15,7 +15,7 @@ function Pop_Products()
                                 <h3> {data.brand} <br /> {data.name} </h3>
                                 <img src={data.images[0].src} alt={data.name} />
                                 <div className="intern_product">
-                                    <span> {data.price},00 <br /> EUR </span>
+                                    <span> {data.price.toFixed(2)} <br /> EUR </span>
                                     <div className="vert_line"></div>
                                     <span> Klik za <br /> kupnju! </span>
                                 </div>
