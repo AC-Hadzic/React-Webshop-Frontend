@@ -1,7 +1,7 @@
 import "./Contact.scss";
 import broccoli from "/assets/images/broccoli_office.jpg";
 
-function Contact()
+function Contact({email, mob_show, golub})
 {
     return (
         <div className="contacts_wrap">
@@ -59,17 +59,17 @@ function Contact()
                             <tbody>
                                 <tr>
                                     <td><strong> Telefon: </strong></td>
-                                    <td>099 909 990</td>
+                                    <td>{mob_show}</td>
                                 </tr>
 
                                 <tr>
                                     <td><strong> Email: </strong></td>
-                                    <td>teleprodaja@gmail.com</td>
+                                    <td>{email}</td>
                                 </tr>
 
                                 <tr>
                                     <td><strong> Golub pismonoša: </strong></td>
-                                    <td>Oliver Golubović</td>
+                                    <td>{golub}</td>
                                 </tr>                                
                             </tbody>
                         </table> 

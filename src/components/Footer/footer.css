@@ -124,6 +124,8 @@
     }
         .copyright {
             text-align: center;
+            display: flex;
+            flex-direction: column;
         }
     
         .vert_line {

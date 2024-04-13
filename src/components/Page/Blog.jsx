@@ -1,6 +1,6 @@
 import "./Blog.scss";
-import burning from "/assets/images/burning_apple.jpg";
-import dirty from "/assets/images/clean_ur_junk.jpg";
+import burning from "/assets/blog_images/burning_apple.jpg";
+import dirty from "/assets/blog_images/clean_ur_junk.jpg";
 
 function Blog()
 {
@@ -9,7 +9,7 @@ function Blog()
         <div className="blog_wrap">
             <article className="blog">
                 <section>
-                    <h2><i class="bi bi-substack"></i> Appleovo rješenje za pregrijavanje iPhonea? </h2>
+                    <h2><i className="bi bi-substack"></i> Appleovo rješenje za pregrijavanje iPhonea? </h2>
                     <div>
                         <img src={burning} alt="Burning iPhone" />
                         <p>
@@ -19,7 +19,7 @@ function Blog()
                 </section>
 
                 <section>
-                    <h2><i class="bi bi-substack"></i> Zašto ova krpica vrijedi svake uložene lipe: </h2>
+                    <h2><i className="bi bi-substack"></i> Zašto ova krpica vrijedi svake uložene lipe: </h2>
                     <div>
                         <img src={dirty} alt="Dude wiping his screen" />
                         <p>

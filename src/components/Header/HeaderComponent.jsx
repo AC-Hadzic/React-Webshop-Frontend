@@ -3,7 +3,7 @@ import "../Specific-Css/theme.scss"
 import { Link } from "react-router-dom";
 import logo from "/assets/others/logo.png";
 
-function HeaderComponent()
+function HeaderComponent({web_title, banner_msg, email, mob_show, mob_link})
 {
     return (
         <div className="BodyHeader">
@@ -13,9 +13,9 @@ function HeaderComponent()
                         <div className="banner_text">
                             <div> 
                                 <p className="remove_mq">
-                                    EKSPLOZIVNI POPUSTI DO ČAK 2%!!!
+                                    {banner_msg}
                                 </p>
-                                <span className="colorup">~TELEPRODAJA~</span>
+                                <span className="colorup">~{web_title}~</span>
                             </div>
                         </div>
                     </div>
@@ -31,12 +31,12 @@ function HeaderComponent()
                             <div className="prvi_red">
                                 <div className="email">
                                     <a href="mailto: telesales@gmail.com"><i className="bi bi-envelope-fill"></i></a>
-                                    <a href="mailto: teleprodaja@gmail.com"> telesales@gmail.com</a>
+                                    <a href={`mailto:${email}`}> {email}</a>
                                 </div>
 
                                 <div className="tel">
                                     <a href="tel:022 123 321"><i className="bi bi-telephone-fill"></i></a>
-                                    <a href="tel:+385022123321">+385 022 123 321</a>
+                                    <a href={`tel:${mob_link}`}> {mob_show} </a>
                                 </div>
 
                                 <div className="social_media">
@@ -62,8 +62,9 @@ function HeaderComponent()
                                 </div>
 
                                 <div className="basket">
-                                    <a href="../cart.html" target="_parent"><i className="bi bi-cart-fill"></i>
-                                    </a>
+                                    <Link to={"/cart"}>
+                                        <i className="bi bi-cart-fill"></i>
+                                    </Link>
                                 </div>
 
                                 <div className="login">

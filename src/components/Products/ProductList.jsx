@@ -86,7 +86,7 @@ function ProductList() {
                                 <h4>Cijene proizvoda:</h4>
                                 {category.price_filter.map((vau, index) => (
                                     
-                                    <div className="form-check ms-2">
+                                    <div className="form-check ms-2" key={index}>
                                         <label className="form-check-label">
                                             <input className="form-check-input" type="radio" name="price_filter" 
                                             onChange={(e) => updateFilters(e.target.checked, vau, 'price')}/>

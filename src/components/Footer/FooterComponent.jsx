@@ -2,7 +2,7 @@ import "./footer.css";
 import "../Specific-Css/theme.scss"
 import { Link } from "react-router-dom";
 
-function FooterComponent()
+function FooterComponent({email, mob_show, adresa, golub, prava1, prava2, maker})
 {
     return (
         <div className="footer_wrap">
@@ -33,13 +33,13 @@ function FooterComponent()
                         <div className="contact">
                             <span><strong>Kontaktirajte nas!</strong></span>
                                 <br />
-                            <span><strong>E-mail:</strong> teleprodaja@gmail.com </span>
+                            <span><strong>E-mail:</strong> {email} </span>
                                 <br />
-                            <span><strong>Tel:</strong> 022 123 321 </span>
+                            <span><strong>Tel:</strong> {mob_show} </span>
                                 <br />
-                            <span><strong>Golub pismonoša:</strong> Oliver Golubović </span>
+                            <span><strong>Golub pismonoša:</strong> {golub} </span>
                                 <br />
-                            <span><strong>Adresa:</strong> ul. Brokulice Hrabroga 2, Šibenik </span>
+                            <span><strong>Adresa:</strong> {adresa} </span>
                                 <br />
                             <Link to={"/contacts"} onClick={() => {window.scrollTo(0, 0)}}>
                                 <button> Kontakt forma</button>
@@ -75,15 +75,15 @@ function FooterComponent()
 
                     <div className="rights">
                         <div className="copyright">
-                            <span>Autorska prava © 2024 TeleProdaja.</span> 
-                                <br /> 
-                            <span>Sva prava nisu zadržana.</span>
+                            <span> {prava1} </span> 
+                                
+                            <span> {prava2} </span>
                         </div>
 
                         <div className="vert_line three"></div>
                         
                         <div className="maker">
-                            <span>Izrada web stranica – Vaša tvrtka</span>
+                            <span> {maker} </span>
                         </div>
                     </div>
                 </div>

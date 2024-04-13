@@ -1,0 +1,317 @@
+.cart_wrap
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .total_basket {
+        margin-inline: 80px;
+        width: 100%; 
+    }
+
+    a, img, button:hover {
+        transition: 0.1s linear all;
+    }
+
+    .naslov {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+    }
+
+    .naslov i {
+        margin-right: 10px;
+        font-size: 1.5rem;
+    }
+
+    .naslov:hover span {
+        color: orange;
+        transition: 0.1s linear all;
+    }
+    
+    .naslov:not(:hover) span {
+        transition: 0.1s linear all;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    section div:first-of-type {
+        min-width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .internal_data {
+        width: 100%;
+        margin-inline: 25px;
+    }
+
+    .internal_data span:nth-of-type(1) {
+        font-style: italic;
+    }
+
+    .internal_data span:nth-of-type(2) {
+        font-weight: bold;
+    }
+
+    section img {
+        height: 180px;
+        width: 180px;
+        border-radius: 25px;
+    }
+
+    .vert_line {
+        height: 80%;
+        max-width: 0px;
+        border-left: 2px white solid;
+        margin-inline: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        transition: 0.1s linear all;
+        color: darkred;
+    }
+
+    a:hover img {
+        box-shadow: 0px 0px 25px 5px darkred;
+    }
+
+    a:not(:hover) {
+        transition: 0.1s linear all;
+    }
+
+    a:active {
+        color: orange;
+    }
+
+    .cijena {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .info_cijena {
+        width: 100%;
+        padding: 30px 0px;
+    }
+
+    h4 {
+        margin-bottom: 0px;
+    }
+
+    h2:nth-of-type(2) {
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    input::placeholder {
+        font-style: italic;
+        font-size: 0.9rem;
+    }
+
+    input {
+        border: 2px solid black;
+        border-radius: 25px;
+        height: 35px;
+        width: 200px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th:not(:first-of-type) {
+        border-left: 2px solid white;
+        height: 40px;
+    }
+
+    .podaci td:not(:nth-of-type(1)) {
+        text-align: center;
+        min-width: 120px;
+        font-weight: bold;
+    }
+
+    .buttons {
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    button {
+        border: 2px solid black;
+        border-radius: 25px;
+        height: 50px;
+        width: 150px; 
+        margin: 25px;
+        font-weight: bold;
+    }
+
+    .info_cijena th{
+        text-align: left;
+    }
+
+    .info_cijena td {
+        text-align: right;
+    }
+
+    .info_cijena span:nth-last-of-type(2) {
+        font-weight: bold;
+    }
+
+    .info_cijena span:nth-last-of-type(1) {
+        float: right;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    #empty_basket {
+        display: none;
+        text-align: center;
+        padding: 100px;
+        font-size: 50px;
+    } 
+
+    #empty_basket span {
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 1080px) 
+    {
+        .internal_data span:nth-of-type(1) {
+            display: none;
+        }
+
+        .total_basket {
+            margin-inline: 40px;
+        }
+
+        .internal_data {
+            margin-right: 0px;
+            margin-left: 10px;
+        }
+
+        .podaci img {
+            width: 100px;
+            height: 100px;
+        }
+
+        h2 {
+            font-size: large;
+        }
+
+        .naslov img {
+            height: 20px;
+            width: 20px;
+            margin-inline: 10px;
+        }
+
+        .buttons button {
+            min-width: 70px;
+            margin: 10px;
+        }
+
+        .cijena .info_cijena span {
+            font-size: 1.5rem;
+        }
+
+        input {
+            height: 30px;
+            width: 160px;
+            margin: 10px;
+        }
+
+        section {
+            margin: 0px;
+        }
+
+        .info_cijena {
+            margin-inline: 20px;
+            padding: 20px 0px;
+        }
+
+        .info_cijena input {
+            height: 25px;
+            width: 130px;
+            margin: 0px;
+        }
+
+        input::placeholder {
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+
+        #empty_basket {
+            font-size: 40px;
+        } 
+    }
+
+    @media screen and (max-width: 850px) 
+    {
+        .total_basket {
+            margin-inline: 10px;
+        }
+
+        .naslovi th:nth-of-type(2), .podaci td:nth-of-type(2), .internal_data, .info_cijena br:nth-last-of-type(1) {
+            display: none;
+        }
+
+        .podaci img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .naslov {
+            justify-content: center;
+        }
+
+        .podaci td:not(:nth-of-type(1)) {
+            min-width: auto;
+        }
+
+        section div:first-of-type {
+            min-width: 70px;
+            height: 70px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+            margin: 5px;
+        }
+
+        .info_cijena {
+            padding: 10px 0px;
+        }
+
+        hr {
+            width: 90%;
+        }
+
+        #empty_basket {
+            font-size: 20px;
+            padding: 20px;
+        } 
+
+        section {
+            align-items: center;
+            justify-content: center;
+        }
+    }    
+}
