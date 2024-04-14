@@ -87,7 +87,7 @@ function SingleProduct()
                             <br /><br />
                         <div className="buy">
                             <div>
-                                <p>Cijena uređaja: <span>{data[id].price},00 EUR</span></p>
+                                <p>Cijena proizvoda: <span>{data[id].price},00 EUR</span></p>
                             </div>
                             <div className="add_to_cart">
                                 <button><i className="bi bi-cart-fill"></i> Dodaj u košaricu</button>

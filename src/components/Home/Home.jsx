@@ -2,25 +2,41 @@ import "./Home.scss";
 import burning from "/assets/blog_images/burning_apple.jpg";
 import dirty from "/assets/blog_images/clean_ur_junk.jpg";
 import { Pop_Products } from "./Pop_Products";
+import { Link } from "react-router-dom";
+import category from "../Products/ProductCategory.json";
+
+const cats = category.categories
 
 function Home()
 {
+    const goToFilteredProductList = (categoryFilter) => {
+        const params = new URLSearchParams();
+    
+        if (categoryFilter) {
+            params.append('category', categoryFilter);
+        }
+        window.location.href = `/product?${params.toString()}`;
+    };
+
     return (
         <div className="main_wrap">
             <div className="main_content">
                 <article className="popularne_kategorije">
                     <div className="bling"> Popularne kategorije: </div>
-                    <div><a href="iOS_products.html">iOS uređaji</a></div>
-                        <div className="vert_line"></div>
-                    <div><a href="iOS_products.html">Apple</a></div>
-                        <div className="vert_line"></div>
-                    <div><a href="android_products.html">Android uređaji</a></div>
-                        <div className="vert_line"></div>
-                    <div><a href="samsung_products.html">Samsung</a></div>
-                        <div className="vert_line"></div>
-                    <div><a href="accessory_products.html">Dodatna oprema</a></div>
+
+                    {/* Map categories from json and generate link to filtered product list */}
+                    <div className="vert_line"></div>
+                    {cats.map((data, id) => (
+                        <div key={id}>
+                            <Link onClick={(e) => goToFilteredProductList(data)}>
+                                {data}
+                            </Link>
+                        </div>
+                    ))}
+                    <div className="vert_line"></div>
                 </article>
 
+                {/* Popularni proizvodi, hard coded u Pop_Products */}
                 <article className="popularni_proizvodi">
                     <div className="blinger"> Prodaje se ko ludo!!! </div>
                     <Pop_Products />

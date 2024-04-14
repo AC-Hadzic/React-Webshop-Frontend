@@ -12,25 +12,55 @@ function ProductList() {
     let [categoryFilters, setcategoryFilters] = useState(new Set());
     let [priceFilter, setPriceFilter] = useState('');
 
+    // Update URL based on category and price filter
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const categories = urlParams.getAll('category');
+        const price = urlParams.get('price');
+    
+        setcategoryFilters(new Set(categories));
+        setPriceFilter(price || '');
+    }, []);
+
     function updateFilters(checked, filter, type) {
-        if (type === 'category') 
-        {
-            if (checked)
-                setcategoryFilters(prev => new Set(prev).add(filter));
-            if (!checked)
+        if (type === 'category') {
+            if (checked) {
+                setcategoryFilters(prev => {
+                    const next = new Set(prev);
+                    next.add(filter);
+                    updateURL(next, priceFilter);
+                    return next;
+                });
+            } 
+            else {
                 setcategoryFilters(prev => {
                     const next = new Set(prev);
                     next.delete(filter);
+                    updateURL(next, priceFilter);
                     return next;
                 });
+            }
         } 
-        else if (type === 'price') 
-        {
-            if (checked)
+        else if (type === 'price') {
+            if (checked) {
                 setPriceFilter(filter);
-            if (!checked)
+                updateURL(categoryFilters, filter);
+            } 
+            else {
                 setPriceFilter('');
+                updateURL(categoryFilters, '');
+            }
         }
+    }
+
+    function updateURL(categories, price) {
+        const params = new URLSearchParams();
+        categories.forEach(cat => params.append('category', cat));
+
+        if (price) {
+            params.set('price', price);
+        }
+        window.history.replaceState({}, '', `/product?${params.toString()}`);
     }
 
     // neam pojma stae ovo
@@ -38,6 +68,12 @@ function ProductList() {
         ? data.filter(p => p.price <= parseInt(priceFilter) || !priceFilter)
         : data.filter(p => categoryFilters.has(p.type) && (p.price <= parseInt(priceFilter) || !priceFilter));
 
+    // Filter cleaning button
+    const clearFilters = () => {
+        setcategoryFilters(new Set());
+        setPriceFilter('');
+        updateURL(new Set(), '');
+    };
         
     // Toggle filter list on/off on small screen
     const toggleAside = () => {
@@ -72,7 +108,8 @@ function ProductList() {
                             {cats.map((meow, index) => (
                             <div className="form-check ms-2" key={index}>
                                 <label className="form-check-label">
-                                    <input className="form-check-input" type="checkbox" 
+                                    <input className="form-check-input" type="checkbox"
+                                    checked={categoryFilters.has(meow)}
                                     onChange={(e) => updateFilters(e.target.checked, meow, 'category')}/>
                                     {meow}
                                 </label>
@@ -84,16 +121,24 @@ function ProductList() {
                             {/* Price Filters */}
                             <div className="cijena_proizvoda">
                                 <h4>Cijene proizvoda:</h4>
+
+                                {/* Filter prices from data */}
                                 {category.price_filter.map((vau, index) => (
                                     
                                     <div className="form-check ms-2" key={index}>
                                         <label className="form-check-label">
                                             <input className="form-check-input" type="radio" name="price_filter" 
+                                            value={vau}
+                                            checked={priceFilter === vau.toString()}
                                             onChange={(e) => updateFilters(e.target.checked, vau, 'price')}/>
                                             Do {vau} EUR
                                         </label>
                                     </div>
                                 ))}
+                            </div>
+                            
+                            <div className="clear_filters">
+                                <button onClick={clearFilters}> Očisti filtere </button>
                             </div>
                         </section>
                     </div>

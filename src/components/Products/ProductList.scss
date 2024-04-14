@@ -136,6 +136,10 @@
         margin-top: 0;
     }
 
+    h4 {
+        margin-bottom: 0;
+    }
+
     .asideProd {
         width: 250px;
         background-color: rgba(65, 4, 4, 0.315);
@@ -157,20 +161,14 @@
         width: 98%;
         border: 1px solid white;
     }
-
-    button:hover
-    {
-        background-color: darkred;
-        transition: 0.1s linear all;
-        color: white;
-    }
-
-    button:active {
-        background-color: orange;
-    }
-
+    
     input {
-        accent-color: darkred;
+        accent-color: orange;
+    }
+
+    .clear_filters {
+        display: flex;
+        justify-content: center;
     }
 
     @media screen and (max-width: 1080px)
@@ -178,5 +176,10 @@
         button {
             font-size: 0.9rem;
         }
+    }
+
+    @media screen and (max-width: 850px)
+    {
+        line-height: 30px;
     }
 }

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Cart.scss";
 import data from "../Products/ProductData.json";
-import { useState } from "react";
 
 const cart_products = [
     {
@@ -16,12 +15,11 @@ const cart_products = [
 
 function Cart()
 {   
-        let [CartContent, srtCartContent] = useState([]); 
-        let popust = 0.1;
-        let max_quantity = 0;
-        let popust_amount = 0;
-        let total_price = 0;
-        let regular_price = 0;
+    let popust = 0.1;
+    let max_quantity = 0;
+    let popust_amount = 0;
+    let total_price = 0;
+    let regular_price = 0;
 
     function final_price()
     {
