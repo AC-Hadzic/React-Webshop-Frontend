@@ -16,7 +16,7 @@ function Home()
             params.append('category', categoryFilter);
         }
         window.location.href = `/product?${params.toString()}`;
-    };
+    };    
 
     return (
         <div className="main_wrap">
