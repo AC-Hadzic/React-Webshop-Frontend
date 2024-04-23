@@ -10,25 +10,25 @@ function Contact({email, mob_show, golub})
             <article className="contacts">
                 <section className="contact_form">
                     <form action="hvala-vam.html" target="_parent" method="get">
-                    <label for="name_surname"> Ime i prezime: </label><br />
+                    <label htmlFor="name_surname"> Ime i prezime: </label><br />
                     <input type="text" name="name_surname" id="name_surname" placeholder="  Gavrilo Paperclip" required />
                         <br /><br />
 
-                    <label for="email"> Email: </label><br />
+                    <label htmlFor="email"> Email: </label><br />
                     <input type="email" name="email" id="email" placeholder="  gav.paperclip@gmail.com" size="30" required />
                         <br /><br />
 
-                    <label for="poruka"> Poruka: </label><br />
+                    <label htmlFor="poruka"> Poruka: </label><br />
                     <textarea name="poruka" id="poruka" cols="32" rows="10" placeholder="  Vaša poruka ovdje." required></textarea>
                         <br /><br />
 
                         <article className="newsletter">
                             <div>
                                 <input type="checkbox" name="obrada_podataka" id="obrada_podataka" required />
-                                <label for="obrada_podataka">Prihvaćam prikupljanje, obradu i zloupotrebu osobnih podataka danih u obrascu bez kojih moj zahtjev ne može biti ispunjen.</label>
+                                <label htmlFor="obrada_podataka">Prihvaćam prikupljanje, obradu i zloupotrebu osobnih podataka danih u obrascu bez kojih moj zahtjev ne može biti ispunjen.</label>
                                     <br /><br />
                                 <input type="checkbox" name="check_newsletter" id="check_newsletter" />
-                                <label for="check_newsletter">Prijavi me na newsletter</label>    
+                                <label htmlFor="check_newsletter">Prijavi me na newsletter</label>    
                             </div>
                         </article>
                             <br /> 

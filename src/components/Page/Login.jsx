@@ -11,12 +11,12 @@ function Login()
                     <form action="" method="get">
                         <div className="user_input">
                             <div className="email_data">
-                                <label for="email"> E-mail adresa: </label>
+                                <label htmlFor="email"> E-mail adresa: </label>
                                 <input type="email" name="email" id="email" />
                             </div>
                                 
                             <div className="pass_data">
-                                <label for="lozinka"> Lozinka: </label>
+                                <label htmlFor="lozinka"> Lozinka: </label>
                                 <input type="password" name="lozinka" id="lozinka" />
                             </div>    
                         </div>
