@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./ProductList.scss";
 import { useState } from "react";
 import { Filter } from "./Filter"; 
+import { useFetch } from "../../hooks/useFetch";
 
 // Filters for category and price
 function ProductList() {
@@ -11,6 +12,10 @@ function ProductList() {
     const handleDataFromChild = (data) => {
         setDataFromChild(data);
     };
+
+    const URL = import.meta.env.VITE_API_URL;
+    const DATA = useFetch(URL); // Fetch podataka sa URL
+    console.log("Data from fetch:", DATA);
 
     return (
         <div className="prod_list_wrap">
@@ -35,6 +40,23 @@ function ProductList() {
                                 <button><i className="bi bi-cart-fill"></i></button>
                                 <br />
                                 <span> {data.price.toFixed(2)} EUR </span>
+                            </div>
+                        </div>
+                        ))}
+                    </div>
+
+                    <div className="options">
+                        {DATA.map((data, proizvodId) => (
+                        <div key={proizvodId}>
+                            <h3> {data.proizvodjac} <br /> {data.imeProizvoda} </h3>
+                            <Link to={"/product/" + data.proizvodId} onClick={() => {window.scrollTo(0, 0)}}>
+                                <img src={data.slikas[0]?.link} alt={data.imeProizvoda} />
+                               { console.log("image url", data.slikas[0]?.link)}
+                            </Link>
+                            <div>
+                                <button><i className="bi bi-cart-fill"></i></button>
+                                <br />
+                                <span> {data.cijena} EUR </span>
                             </div>
                         </div>
                         ))}
