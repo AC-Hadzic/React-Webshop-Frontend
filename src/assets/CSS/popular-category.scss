@@ -1,0 +1,48 @@
+.popularne_kategorije {
+    height: 100px;
+    width: 100%;
+    border-bottom: 2px solid white;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: linear-gradient(90deg, rgba(160, 57, 57, 0) 0%, rgba(160, 57, 57, 0.3) 2%, rgba(160, 57, 57, 0.3) 50%, rgba(160, 57, 57, 0.3) 98%, rgba(160, 57, 57, 0) 100%);
+
+    div:not(:first-of-type) {
+        width: 230px;
+        text-align: center;
+    }
+
+    .vert_line {
+        height: 80%;
+        max-width: 0px;
+        border-left: 2px white solid;
+    }
+
+    .bling {
+        width: 260px;
+        height: 50px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .popularne_kategorije {
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .popularne_kategorije {
+        font-size: 0.9rem;
+        height: 40px;
+
+        .bling {
+            display: none;
+        }        
+    }
+}
