@@ -1,21 +1,24 @@
 import { useParams } from "react-router-dom";
-import data from "../../assets/JSON/ProductData.json";
 import "../../assets/CSS/single-product.scss";
+import { useFetch } from "../../hooks/useFetch";
 
 function SingleProduct()
 {
     // Get ID from URL
     let { id } = useParams();
+    const URL = import.meta.env.VITE_API_URL + "/" + id;
+    const data = useFetch(URL); // Fetch podataka sa URL
 
     // Get all the img src from array
     function gallery()
     {
-        const prod_img = data[id].images;
-
         return (
-            prod_img.map((data, id) => (
-                <img key={id} src={data.src} alt="" />
-            ))            
+            (data.slikas) ?
+            (data.slikas.map((data, id) => (
+                <img key={id} src={data.link} alt={data.opis} />
+                
+            ))) :
+            (<p> Loading... </p>)
         )
     }
 
@@ -56,38 +59,39 @@ function SingleProduct()
     return (
         <>
             <div className="product_wrap">
-                <h1> {data[id].name} </h1>
+                <h1>{data.proizvodjac} {data.imeProizvoda} </h1>
                 <section className="proizvod_opis">
                     <div className="proizvod_slika">
-                        <img src={data[id].images[0].src} alt={data[id].name} />
+                        {data.slikas ? (<img src={data.slikas[0].link} alt={data.slikas[0].opis} />) : <p>Loading</p>}
+                        
                     </div>
                     <div className="proizvod_text">
                         <h3> Opis proizvoda: </h3>
-                        <p> {data[id].description} </p>
+                        <p> {data.opis} </p>
 
-                        <h3> Šifra proizvoda: <span> {data[id].code} </span></h3>
+                        {/* <h3> Šifra proizvoda: <span> {data[id].code} </span></h3> */}
                         <h3>Specifikacije:</h3>
 
                         {/* Different specs depending on product */}
-                        {data[id].specifications ? (
+                        {data.spec4 !== null ? (
                             <div>
-                                <p><span>Zaslon:</span> {data[id].specifications.display} </p>
-                                <p><span>Čip:</span> {data[id].specifications.chip} </p>
-                                <p><span>Kamere:</span> {data[id].specifications.cameras} </p>
-                                <p><span>Baterija:</span> {data[id].specifications.battery} </p>
+                                <p><span>Zaslon:</span> {data.spec1} </p>
+                                <p><span>Čip:</span> {data.spec2} </p>
+                                <p><span>Kamere:</span> {data.spec3} </p>
+                                <p><span>Baterija:</span> {data.spec4} </p>
                             </div>
                         ) : (
                             <div>
-                                <p><span>Materijal:</span> {data[id].specs.build} </p>
-                                <p><span>Dimenzije:</span> {data[id].specs.dimensions} </p>
-                                <p><span>Upotreba:</span> {data[id].specs.usage} </p>
+                                <p><span>Materijal:</span> {data.spec1} </p>
+                                <p><span>Dimenzije:</span> {data.spec2} </p>
+                                <p><span>Upotreba:</span> {data.spec3} </p>
                             </div>
                         )}
 
                             <br /><br />
                         <div className="buy">
                             <div>
-                                <p>Cijena proizvoda: <span>{data[id].price},00 EUR</span></p>
+                                <p>Cijena proizvoda: <span>{data.cijena},00 EUR</span></p>
                             </div>
                             <div className="add_to_cart">
                                 <button><i className="bi bi-cart-fill"></i> Dodaj u košaricu</button>
@@ -109,13 +113,13 @@ function SingleProduct()
                 <section className="proizvod_recenzije">
                     <div className="rating">
                         <span>Ukupna ocjena: </span> <br />
-                        {stars()} 
+                        {/* {stars()}  */}
                         <span className="fa fa-star"></span>  
-                        <span>({data[id].rate})</span>   
+                        {/* <span>({data[id].rate})</span>    */}
                     </div>
 
                     <div className="user_ratings">
-                        {reviews()}
+                        {/* {reviews()} */}
 
                         <button> Komentiraj </button>
                     </div>
