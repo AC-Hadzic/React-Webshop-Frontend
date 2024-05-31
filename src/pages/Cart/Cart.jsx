@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import "../../assets/CSS/cart.scss";
 import data from "../../assets/JSON/ProductData.json";
+import { useFetch } from "../../hooks/useFetch";
+import { useUpdateProduct } from "../../hooks/useUpdateProduct";
+import { useRemoveProduct } from "../../hooks/useRemoveProduct";
+import { useEffect } from "react";
+import toast from "react-hot-toast";
+
 
 const cart_products = [
     {
@@ -13,23 +19,67 @@ const cart_products = [
     }
 ]
 
-function Cart()
-{   
-    let popust = 0.1;
+function Cart() {
+    const URL = import.meta.env.VITE_API_URL;
+    const { data: cart, refetch } = useFetch(URL + "cart/1");
+    const { updateProduct } = useUpdateProduct();
+    const { removeProduct } = useRemoveProduct();
+
+    const handleUpdateProduct = async (productId) => {
+        await updateProduct(URL, cartID, productId, "add");
+        toast.success('Product quantity updated!', {style: {borderRadius: "25px"}})
+        refetch();
+    };
+
+    const handleRemoveProduct = async (productId, quantity) => {
+        if (quantity <= 1) {
+            await handleDeleteProduct(productId);
+        } else {
+            await updateProduct(URL, cartID, productId, "remove");
+            toast.success('Product quantity updated!', {style: {borderRadius: "25px"}})
+        }
+        refetch();
+    };
+
+    const handleDeleteProduct = async (productId) => {
+        await removeProduct(URL, cartID, productId, "single");
+        toast.success('Product removed from cart!', {style: {borderRadius: "25px"}});
+    };
+
+    const handleClearCart = async () => {
+        await removeProduct(URL, cartID);
+        toast.success('Product removed from cart!', {style: {borderRadius: "25px"}});
+        refetch();
+    };
+
+    useEffect(() => {
+        if (cart && cart.cartProducts) {
+            cart.cartProducts.forEach(product => {
+                if (product.quantity <= 0) {
+                    handleDeleteProduct(product.productId);
+                }
+            });
+        }
+    }, [cart]);
+
+    let popust = 0.05;
+
     let max_quantity = 0;
     let popust_amount = 0;
     let total_price = 0;
     let regular_price = 0;
+    let kolicina = 0;
+    const cartID = 1;
+    
 
-    function final_price()
-    {
+    function final_price() {
         cart_products.map((data, id) => (
-            max_quantity += data.quantity,  
+            max_quantity += data.quantity,
             total_price += data.product.price * data.quantity,
             regular_price = total_price
         ))
 
-        if(max_quantity >= 5) {
+        if (max_quantity >= 5) {
             popust_amount = total_price * popust
             total_price *= (1 - popust)
         }
@@ -50,10 +100,20 @@ function Cart()
                         <button> Vrati se u kupnju </button>
                     </Link>
                 </div>
-                
+
                 <div className="naslov" id="naslov">
                     <i className="bi bi-cart-fill"></i>
-                    <h2> Proizvodi u košarici: <span>{max_quantity}</span></h2>
+                    <h2> Proizvodi u košarici: <span>
+                        {
+
+                            cart.cartProducts?.map((product, id) =>
+                                {kolicina += Number(product.quantity)}
+                            )
+                                
+                        }
+
+                    { kolicina }
+                    </span></h2>
                 </div>
 
                 <div className="u_kosarici" id="u_kosarici">
@@ -63,32 +123,36 @@ function Cart()
                                 <th> Proizvodi: </th>
                                 <th> Cijena: </th>
                                 <th> Količina: </th>
-                                <th> Ukupno: </th>                            
-                            </tr>                            
+                                <th> Ukupno: </th>
+                            </tr>
                         </thead>
                         <tbody>
-                            {cart_products.map((data, id) =>(
-                                <tr className="podaci"  key={id}>
-                                    <td>
-                                        <Link to={"/product/" + data.product.id} onClick={() => {window.scrollTo(0, 0)}}>
-                                            <section>
-                                                <div>
-                                                    <img className="cart_img" src={data.product.images[0].src} alt={data.product.name}/>
-                                                </div>
-                                                <div className="internal_data">
-                                                    <h3> {data.product.brand} {data.product.name} </h3>
-                                                    <span><br /> {data.product.description} <br /><br /></span>
-                                                    <span>Šifra artikla: {data.product.code}</span>    
-                                                </div>
-                                            </section>
-                                        </Link>
-                                    </td>
+                            {cart.cartProducts?.map((product, id) => (
+                                product.quantity > 0 && (
+                                    <tr className="podaci" key={id}>
+                                        <td>
+                                            <Link to={"/product/" + product.productId} onClick={() => { window.scrollTo(0, 0) }}>
+                                                <section>
+                                                    <div>
+                                                        <img className="cart_img" src={product.thumbnailLink} alt={product.thumbnailDescription} />
+                                                    </div>
+                                                    <div className="internal_data">
+                                                        <h3> {product.manufacturer} {product.productName} </h3>
+                                                        <span><br /> {product.description} <br /><br /></span>
+                                                    </div>
+                                                </section>
+                                            </Link>
+                                        </td>
 
-                                    <td> {data.product.price.toFixed(2)} EUR </td>
-                                    <td> {data.quantity} </td>
-                                    <td> {(data.quantity * data.product.price).toFixed(2)} EUR </td>                                
-                                </tr>
-                            ))}                            
+                                        <td> {product.price.toFixed(2)} EUR </td>
+                                        <td> {product.quantity} </td>
+
+                                        <td> <button onClick={() => handleUpdateProduct(product.productId)}> Plus </button></td>
+                                        <td> <button onClick={() => handleRemoveProduct(product.productId, product.quantity)}> Minus </button></td>
+                                        <td> {(product.quantity * product.price).toFixed(2)} EUR </td>
+                                    </tr>
+                                )
+                            ))}
                         </tbody>
                     </table>
                 </div>
@@ -97,13 +161,13 @@ function Cart()
 
                 <div className="cijena" id="cijena">
                     <div className="buttons">
-                        <Link to={"/product"} onClick={() => {window.scrollTo(0, 0)}}>
+                        <Link to={"/product"} onClick={() => { window.scrollTo(0, 0) }}>
                             <button> Vrati se u kupnju </button>
                         </Link>
                         {/* onclick to the refresh button */}
-                        <button> Ažuriraj košaricu </button> 
+                        <button> Ažuriraj košaricu </button>
                         {/* onclick to delete all */}
-                        <button id="delete_all"> Poništi sve </button>
+                        <button id="delete_all" onClick={() => handleClearCart()}> Poništi sve </button>
                         <a href="checkout.html"><button> Checkout </button></a>
                     </div>
 
@@ -114,12 +178,12 @@ function Cart()
                             <tbody>
                                 <tr>
                                     <th> Redovna cijena: </th>
-                                    <td> {regular_price} EUR</td>
+                                    <td> {kolicina >= 5 ? (cart.total / (1 - popust)).toFixed(2) : cart.total} EUR</td>
                                 </tr>
 
                                 <tr>
                                     <th> Popusti: </th>
-                                    <td><b>{popust * 100}%</b> - {(regular_price * popust).toFixed(2)} EUR</td>
+                                    <td><b>{kolicina >= 5 ? popust * 100 : 0}% </b> - {kolicina >= 5 ? (cart.total / (1 - popust) *  popust).toFixed(2) : 0} EUR</td>
                                 </tr>
 
                                 <tr>
@@ -130,14 +194,14 @@ function Cart()
                                 <tr>
                                     <th> Dodatni troškovi, kamate, carine i reket: </th>
                                     <td> 0,00 EUR </td>
-                                </tr>                                
+                                </tr>
                             </tbody>
                         </table>
 
                         <br /><br />
 
                         <span> Sveukupno: </span>
-                        <span> {total_price.toFixed(2)} EUR </span>   
+                        <span> {cart?.total?.toFixed(2)} EUR </span>
                     </div>
                 </div>
             </article>
@@ -145,4 +209,4 @@ function Cart()
     )
 }
 
-export {Cart};
+export { Cart };

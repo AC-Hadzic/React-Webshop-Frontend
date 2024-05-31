@@ -1,13 +1,22 @@
 import { useParams } from "react-router-dom";
 import "../../assets/CSS/single-product.scss";
 import { useFetch } from "../../hooks/useFetch";
+import { useUpdateProduct } from "../../hooks/useUpdateProduct";
+import toast from "react-hot-toast";
 
 function SingleProduct()
 {
     // Get ID from URL
     let { id } = useParams();
-    const URL = import.meta.env.VITE_API_URL + "/" + id;
-    const data = useFetch(URL); // Fetch podataka sa URL
+    const URL = import.meta.env.VITE_API_URL;
+    const { data } = useFetch(URL + "products/" + id); // Fetch podataka sa URL
+    const cartID = 1;
+    const { updateProduct } = useUpdateProduct();
+
+    const handleUpdateProduct = () => {
+        updateProduct(URL, cartID, id, "add");
+        toast.success('Product added to cart!', {style: {borderRadius: "25px"}})
+    };
 
     // Get all the img src from array
     function gallery()
@@ -94,7 +103,7 @@ function SingleProduct()
                                 <p>Cijena proizvoda: <span>{data.cijena},00 EUR</span></p>
                             </div>
                             <div className="add_to_cart">
-                                <button><i className="bi bi-cart-fill"></i> Dodaj u košaricu</button>
+                                <button  onClick={() => {handleUpdateProduct()}}><i className="bi bi-cart-fill"></i> Dodaj u košaricu</button>
                             </div>
                         </div>
                     </div>
