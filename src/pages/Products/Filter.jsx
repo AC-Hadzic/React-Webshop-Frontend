@@ -1,66 +1,19 @@
-import data from "../../assets/JSON/ProductData.json";
-import category from "../../assets/JSON/ProductCategory.json"
+import price_cat from "../../assets/JSON/ProductPriceFilter.json"
 import "../../assets/CSS/product-list.scss";
 import { useState, useEffect } from "react";
+import { useFetch } from "../../hooks/useFetch";
 
-const cats = category;
+const price_cats = price_cat;
 
 // Filters for category and price
-function Filter({sendDataToParent}) {
+function Filter({ sendDataToParent }) {
     const [asideVisible, setAsideVisible] = useState(true);
-    let [categoryFilters, setcategoryFilters] = useState(new Set());
-    let [priceFilter, setPriceFilter] = useState('');
+    const [categoryFilters, setCategoryFilters] = useState(new Set());
+    const [priceFilter, setPriceFilter] = useState('');
 
-    // Sends filter changes to parent to map
-    const handleChange = () => {
-        sendDataToParent(filteredProducts);
-    };
-
-    // Effect checks for any filter changes in order to update asap
-    useEffect(() => {
-        handleChange();
-    }, [categoryFilters, priceFilter]);
-
-    // Update URL based on category and price filter
-    useEffect(() => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const categories = urlParams.getAll('category');
-        const price = urlParams.get('price');
-    
-        setcategoryFilters(new Set(categories));
-        setPriceFilter(price || '');
-    }, []);
-
-    function updateFilters(checked, filter, type) {
-        if (type === 'category') {
-            if (checked) {
-                setcategoryFilters(prev => {
-                    const next = new Set(prev);
-                    next.add(filter);
-                    updateURL(next, priceFilter);
-                    return next;
-                });
-            } 
-            else {
-                setcategoryFilters(prev => {
-                    const next = new Set(prev);
-                    next.delete(filter);
-                    updateURL(next, priceFilter);
-                    return next;
-                });
-            }
-        } 
-        else if (type === 'price') {
-            if (checked) {
-                setPriceFilter(filter);
-                updateURL(categoryFilters, filter);
-            } 
-            else {
-                setPriceFilter('');
-                updateURL(categoryFilters, '');
-            }
-        }
-    }
+    const URL = import.meta.env.VITE_API_URL;
+    const { data: products } = useFetch(URL + "products"); // Fetch podataka sa URL
+    const { data: category } = useFetch(URL + "category"); // Fetch kategorija
 
     // URL updater
     function updateURL(categories, price) {
@@ -73,18 +26,50 @@ function Filter({sendDataToParent}) {
         window.history.replaceState({}, '', `/product?${params.toString()}`);
     }
 
+    // Function to update filters
+    function updateFilters(checked, filter, type) {
+        if (type === 'category') {
+            setCategoryFilters(prev => {
+                const next = new Set(prev);
+                checked ? next.add(filter) : next.delete(filter);
+                updateURL(next, priceFilter);
+                return next;
+            });
+        } else if (type === 'price') {
+            setPriceFilter(checked ? filter : '');
+            updateURL(categoryFilters, checked ? filter : '');
+        }
+    }
+
     // Filtering of cats and prices, saved into one array
-    const filteredProducts = categoryFilters.size === 0 
-        ? data.filter(p => p.price <= parseInt(priceFilter) || !priceFilter)
-        : data.filter(p => categoryFilters.has(p.type) && (p.price <= parseInt(priceFilter) || !priceFilter));
-    
+    const filteredProducts = products.filter(p => {
+        const categoryMatch = categoryFilters.size === 0 || categoryFilters.has(p.category);
+        const priceMatch = !priceFilter || p.price <= parseInt(priceFilter);
+        return categoryMatch && priceMatch;
+    });
+
+    // Effect checks for any filter changes in order to update asap
+    useEffect(() => {
+        sendDataToParent(filteredProducts);
+    }, [categoryFilters, priceFilter, products]);
+
+    // Update URL based on category and price filter
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const categories = urlParams.getAll('category');
+        const price = urlParams.get('price');
+
+        setCategoryFilters(new Set(categories));
+        setPriceFilter(price || '');
+    }, []);
+
     // Filter cleaning button
     const clearFilters = () => {
-        setcategoryFilters(new Set());
+        setCategoryFilters(new Set());
         setPriceFilter('');
         updateURL(new Set(), '');
     };
-        
+
     // Toggle filter list on/off on small screen
     const toggleAside = () => {
         setAsideVisible(prevState => !prevState);
@@ -92,15 +77,11 @@ function Filter({sendDataToParent}) {
 
     // Check screen size to either hide or show filters
     useEffect(() => {
-        const handleResize = () => {
-        if (window.innerWidth >= 1080) {
-            setAsideVisible(true);
-        }};
-
+        const handleResize = () => setAsideVisible(window.innerWidth >= 1080);
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-    
+
     return (
         <div>
             {/* Filter toggle button only under 1080px */}
@@ -116,17 +97,17 @@ function Filter({sendDataToParent}) {
                         <h4>Tip proizvoda:</h4>
 
                         {/* Category filters */}
-                        {cats.categories.map((meow, index) => (
-                        <div className="form-check ms-2" key={index}>
-                            <label className="form-check-label">
-                                <input className="form-check-input" type="checkbox"
-                                checked={categoryFilters.has(meow)}
-                                onChange={(e) => updateFilters(e.target.checked, meow, 'category')}/>
-                                {meow}
-                            </label>
-                        </div>
+                        {category?.map((cats, index) => (
+                            <div className="form-check ms-2" key={index}>
+                                <label className="form-check-label">
+                                    <input className="form-check-input" type="checkbox"
+                                        checked={categoryFilters.has(cats.categoryName)}
+                                        onChange={(e) => updateFilters(e.target.checked, cats.categoryName, 'category')} />
+                                    {cats.categoryName}
+                                </label>
+                            </div>
                         ))}
-                        
+
                         <hr />
 
                         {/* Price Filters */}
@@ -134,20 +115,20 @@ function Filter({sendDataToParent}) {
                             <h4>Cijene proizvoda:</h4>
 
                             {/* Filter prices from data */}
-                            {cats.price_filter.map((meow, index) => (
-                                
+                            {price_cats.price_filter.map((meow, index) => (
+
                                 <div className="form-check ms-2" key={index}>
                                     <label className="form-check-label">
-                                        <input className="form-check-input" type="radio" name="price_filter" 
-                                        value={meow}
-                                        checked={priceFilter === meow.toString()}
-                                        onChange={(e) => updateFilters(e.target.checked, meow, 'price')}/>
+                                        <input className="form-check-input" type="radio" name="price_filter"
+                                            value={meow}
+                                            checked={priceFilter === meow.toString()}
+                                            onChange={(e) => updateFilters(e.target.checked, meow, 'price')} />
                                         Do {meow} EUR
                                     </label>
                                 </div>
                             ))}
                         </div>
-                        
+
                         <div className="clear_filters">
                             <button onClick={clearFilters}> Očisti filtere </button>
                         </div>
@@ -158,4 +139,4 @@ function Filter({sendDataToParent}) {
     );
 }
 
-export {Filter};
+export { Filter };

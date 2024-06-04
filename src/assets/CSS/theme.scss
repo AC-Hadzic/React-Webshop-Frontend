@@ -1,5 +1,6 @@
 .light_mode 
 {
+    color: red !important;
     .background_header, main, object > .main 
     {
         background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 5%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.7) 95%, rgba(255, 255, 255, 0) 100%);

@@ -2,6 +2,7 @@ import "../../assets/CSS/header.scss";
 import "../../assets/CSS/theme.scss";
 import { Link } from "react-router-dom";
 import logo from "../../../public/assets/others/logo.png";
+import { ThemeToggleComponent } from "../../components/ButtonComponents/ThemeToggleComponent";
 
 function HeaderComponent({web_title, banner_msg, email, mob_show, mob_link})
 {
@@ -18,6 +19,7 @@ function HeaderComponent({web_title, banner_msg, email, mob_show, mob_link})
                                 <span className="colorup">~{web_title}~</span>
                             </div>
                         </div>
+                        <ThemeToggleComponent />
                     </div>
 
                     <div className="MainBody">

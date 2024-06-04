@@ -221,6 +221,44 @@
     .banner_text, span, i:not(:hover) {
         transition: 0.1s linear all;
     }
+
+    .theme_button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 70px;
+        height: 70px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: none;
+            font-size: 2rem;
+            background-color: white;
+        }
+
+        button:hover {
+            width: 58px;
+            height: 58px;
+            transition: 0.1s linear all;
+            color: orange;
+        }
+
+        button:not(:hover) {
+            transition: 0.1s linear all;
+        }
+
+        button:active {
+            width: 52px;
+            height: 52px;
+        }
+
+    }
     
     @media screen and (max-width: 1080px) {
         .logo img {

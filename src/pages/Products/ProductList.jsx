@@ -38,7 +38,7 @@ function ProductList() {
                 <section className="fit_all">
                     <h2><i className="bi bi-tags-fill"></i> Svi proizvodi: </h2>
                     <div className="options">
-                        {data.map((data, id) => (
+                        {dataFromChild.map((data, id) => (
                         <div key={id}>
                             <h3> {data.manufacturer} <br /> {data.productName} </h3>
                             <Link to={"/product/" + data.productId} onClick={() => {window.scrollTo(0, 0)}}>
