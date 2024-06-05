@@ -6,8 +6,8 @@ function PopularCategoryComponent({category}) {
         return (
             category.map((data, id) => (         
                 <div key={id}>
-                    <Link onClick={() => goToFilteredProductList(data)}>
-                        <div>{data}</div>
+                    <Link onClick={() => goToFilteredProductList(data.categoryName)}>
+                        <div>{data.categoryName}</div>
                     </Link>
                 </div>
             ))

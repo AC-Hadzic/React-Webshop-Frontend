@@ -1,4 +1,5 @@
 import "../../assets/CSS/newsletter.scss";
+import { NewsLetterCheckbox } from "./NewsLetterCheckbox";
 
 function NewsletterComponent({ title, text, emailRequestText, dataCollectText, acceptText }) {
     return (
@@ -12,15 +13,10 @@ function NewsletterComponent({ title, text, emailRequestText, dataCollectText, a
                     </label>
                     <input type="email" name="email" id="email" placeholder="  E-mail adresa" required />
                         <br />
-                    <input type="checkbox" name="obrada_podataka" id="obrada_podataka" />
-                    <label htmlFor="obrada_podataka">
-                        {dataCollectText}
-                    </label>
-                        <br />
-                    <input type="checkbox" name="check_newsletter" id="check_newsletter" required />
-                    <label htmlFor="check_newsletter"> 
-                        {acceptText} 
-                    </label>    
+                    <NewsLetterCheckbox 
+                        dataCollectText={dataCollectText}
+                        acceptText={acceptText}
+                    />
                 </div>
 
                 <button type="submit"> Prijava! </button> 

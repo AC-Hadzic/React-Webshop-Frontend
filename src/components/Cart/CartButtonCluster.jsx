@@ -7,11 +7,16 @@ function CartButtonCluster({ handleClearCart }) {
             <Link to={"/product"} onClick={() => { window.scrollTo(0, 0) }}>
                 <button> Vrati se u kupnju </button>
             </Link>
+
             {/* onclick to the refresh button */}
             <button> Ažuriraj košaricu </button>
+
             {/* onclick to delete all */}
             <button id="delete_all" onClick={() => handleClearCart()}> Poništi sve </button>
-            <a href="checkout.html"><button> Checkout </button></a>
+            
+            <Link to={"/checkout"} onClick={() => { window.scrollTo(0, 0) }}> 
+                <button> Checkout </button> 
+            </Link>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import React from "react";
 import "../../assets/CSS/cart.scss";
 import { useFetch } from "../../hooks/useFetch";
 import { useUpdateProduct } from "../../hooks/useUpdateProduct";

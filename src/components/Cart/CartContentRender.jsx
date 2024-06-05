@@ -34,8 +34,20 @@ function CartContentRender({ cart, handleUpdateProduct, handleRemoveProduct }) {
                                 <td> {product.price.toFixed(2)} EUR </td>
                                 <td> {product.quantity} </td>
 
-                                <td> <button onClick={() => handleUpdateProduct(product.productId)}> Plus </button></td>
-                                <td> <button onClick={() => handleRemoveProduct(product.productId, product.quantity)}> Minus </button></td>
+
+                                {handleUpdateProduct &&
+                                    (
+                                        <>
+                                            <td>
+                                                <button onClick={() => handleUpdateProduct(product.productId)}> Plus </button>
+                                            </td>
+                                            <td>
+                                                <button onClick={() => handleRemoveProduct(product.productId, product.quantity)}> Minus </button>
+                                            </td>
+                                        </>
+                                    )
+                                }
+
                                 <td> {(product.quantity * product.price).toFixed(2)} EUR </td>
                             </tr>
                         )

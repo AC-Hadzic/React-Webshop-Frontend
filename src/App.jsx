@@ -9,6 +9,7 @@ import { Contacts } from './pages/Contacts/Contacts'
 import { Blog } from './pages/Blog/Blog'
 import { Login } from './pages/Login/Login'
 import { Cart } from './pages/Cart/Cart'
+import { Checkout } from './pages/Cart/Checkout'
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                     <Route path='/blog' element={<Blog />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/cart' element={<Cart />} />
+                    <Route path='/checkout' element={<Checkout />} />
 
                     <Route path='/product' element={<Outlet />}>
                     <Route index element={<ProductList title={"Default"} />} />

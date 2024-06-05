@@ -1,23 +1,27 @@
 import "../../assets/CSS/home-page.scss";
 import { PopularProductsComponent } from "../../components/PopularProducts/PopularProductsComponent";
-import category from "../../assets/JSON/ProductCategory.json";
 import data from "../../assets/JSON/ProductData.json";
 import { NewsletterComponent } from "../../components/Newsletter/NewsletterComponent";
 import { PopularCategoryComponent } from "../../components/PopularCategory/PopularCategoryComponent";
 import { BlogShortComponent } from "../../components/Blog/BlogShortComponent";
 import burning from "../../../public/assets/blog_images/burning_apple.jpg";
 import dirty from "../../../public/assets/blog_images/clean_ur_junk.jpg";
+import { useFetch } from "../../hooks/useFetch";
+import { useContext } from "react";
+import { NewsLetterContext } from "../../context/NewsLetterContext";
 
 function HomePage()
-{
-    const cats = category.categories;
+{   
+    const URL = import.meta.env.VITE_API_URL;
+    const { data: category } = useFetch(URL + "category"); // Fetch kategorija
     const POPULAR_PRODUCTS = [data[0], data[1], data[2], data[5]];
+    const { dataCollectText, acceptText } = useContext(NewsLetterContext)
 
     return (
         <div className="main_wrap">
             <div className="main_content">
                 <PopularCategoryComponent 
-                    category={cats}
+                    category={category}
                 />
 
                 {/* Popularni proizvodi, lista proizvoda u HomePage */}
@@ -42,8 +46,8 @@ function HomePage()
                     title="Newsletter"
                     text="Pretplati se na naš newsletter te budi među prvima koji će biti obavješten o našim urnebesnim popustima i pogodnostima!"
                     emailRequestText="Molimo upišite email adresu na kojoj želite primati obavijesti:"
-                    dataCollectText="Prihvaćam prikupljanje, obradu i zloupotrebu osobnih podataka danih u obrascu bez kojih moj zahtjev ne može biti ispunjen."
-                    acceptText="Prijavi me na newsletter"
+                    dataCollectText={dataCollectText}
+                    acceptText={acceptText}
                 />
             </div>
         </div>
