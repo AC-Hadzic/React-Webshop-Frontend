@@ -13,7 +13,6 @@ function Checkout() {
 
     let popust = 0.05;
     let kolicina = 0;
-    const cartID = 1;
 
     return (
         <main className="checkout">
