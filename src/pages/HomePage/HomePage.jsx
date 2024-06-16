@@ -16,6 +16,7 @@ function HomePage()
     const { data: category } = useFetch(URL + "category"); // Fetch kategorija
     const POPULAR_PRODUCTS = [data[0], data[1], data[2], data[5]];
     const { dataCollectText, acceptText } = useContext(NewsLetterContext)
+    console.log('API URL:', import.meta.env.VITE_API_URL);
 
     return (
         <div className="main_wrap">
