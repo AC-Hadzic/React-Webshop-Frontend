@@ -28,7 +28,7 @@ function CartPriceComponent({ kolicina, total, popust }) {
             <br /><br />
 
             <span> Sveukupno: </span>
-            <span> {total?.toFixed(2)} EUR </span>
+            <span> {total.toFixed(2)} EUR </span>
         </div>
     )
 }
