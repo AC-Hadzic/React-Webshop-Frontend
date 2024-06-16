@@ -18,7 +18,7 @@ function ProductList() {
     };
 
     const URL = import.meta.env.VITE_API_URL;
-    const { data } = useFetch(URL + "products"); // Fetch podataka sa URL
+    const { data } = useFetch(URL + "/products"); // Fetch podataka sa URL
 
     const handleUpdateProduct = (productId) => {
         updateProduct(URL, cartID, productId, "add");
