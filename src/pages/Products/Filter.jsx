@@ -12,8 +12,8 @@ function Filter({ sendDataToParent }) {
     const [priceFilter, setPriceFilter] = useState('');
 
     const URL = import.meta.env.VITE_API_URL;
-    const { data: products } = useFetch(URL + "products"); // Fetch podataka sa URL
-    const { data: category } = useFetch(URL + "category"); // Fetch kategorija
+    const { data: products } = useFetch(URL + "/products"); // Fetch podataka sa URL
+    const { data: category } = useFetch(URL + "/category"); // Fetch kategorija
 
     // URL updater
     function updateURL(categories, price) {
